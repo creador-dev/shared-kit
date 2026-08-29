@@ -15,6 +15,6 @@ export function Actions() {
 }
 ```
 
-Component styles load automatically with their components. Import `@creador-dev/styles` once in the application to use the shared theme variables and global foundations.
+Each component keeps its SCSS beside its React source and loads the compiled styles automatically. Import `@creador-dev/styles` once in the application to use the shared theme variables and global foundations.
 
-The static `@creador-dev/components/styles.css` export remains available for environments that disable runtime style injection.
+The source `@creador-dev/components/styles.scss` export remains available for Sass-based applications that disable runtime style injection.

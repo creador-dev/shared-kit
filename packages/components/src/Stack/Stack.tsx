@@ -1,5 +1,5 @@
 import type { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import "./stack.css";
+import "./Stack.scss";
 
 export interface StackProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -39,3 +39,4 @@ export function Stack({
     </div>
   );
 }
+

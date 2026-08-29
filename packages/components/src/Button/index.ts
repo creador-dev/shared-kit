@@ -1,2 +1,2 @@
 export { Button, type ButtonProps } from "./Button";
-export { Stack, type StackProps } from "./Stack";
+

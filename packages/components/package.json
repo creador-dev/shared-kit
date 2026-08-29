@@ -4,9 +4,9 @@
   "description": "Accessible, reusable React UI primitives",
   "type": "module",
   "sideEffects": [
-    "**/*.css"
+    "**/*.scss"
   ],
-  "files": ["dist", "src/*.css"],
+  "files": ["dist", "src/**/*.scss"],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,10 +15,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./src/styles.css"
+    "./styles.scss": "./src/styles.scss"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --external react --inject-style",
+    "build": "tsup --config tsup.config.ts",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit"
   },
