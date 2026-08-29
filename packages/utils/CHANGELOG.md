@@ -1,5 +1,11 @@
 # @creador-dev/utils
 
+## 0.2.0
+
+### Minor Changes
+
+- 5e51368: Migrate the component library to Tailwind CSS v4 and shadcn/ui, prefix all public CSS classes and variables with `wpxdev`, and add focused component, hook, and utility entry points.
+
 ## 0.1.1
 
 ### Patch Changes
