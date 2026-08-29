@@ -1,0 +1,36 @@
+{
+  "name": "@creador-dev/shared-kit",
+  "version": "0.0.0",
+  "description": "Complete collection of reusable Creador frontend packages",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "files": ["dist", "src/styles.css"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./src/styles.css"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --external react",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@creador-dev/components": "workspace:^",
+    "@creador-dev/hooks": "workspace:^",
+    "@creador-dev/styles": "workspace:^",
+    "@creador-dev/utils": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
+

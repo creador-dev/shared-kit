@@ -34,6 +34,21 @@ importers:
 
   packages/hooks: {}
 
+  packages/shared-kit:
+    dependencies:
+      '@creador-dev/components':
+        specifier: workspace:^
+        version: link:../components
+      '@creador-dev/hooks':
+        specifier: workspace:^
+        version: link:../hooks
+      '@creador-dev/styles':
+        specifier: workspace:^
+        version: link:../styles
+      '@creador-dev/utils':
+        specifier: workspace:^
+        version: link:../utils
+
   packages/styles: {}
 
   packages/utils: {}

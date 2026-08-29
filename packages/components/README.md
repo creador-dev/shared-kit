@@ -4,7 +4,6 @@ Accessible React UI primitives that use the design tokens from `@creador-dev/sty
 
 ```tsx
 import { Button, Stack } from "@creador-dev/components";
-import "@creador-dev/components/styles.css";
 
 export function Actions() {
   return (
@@ -16,5 +15,6 @@ export function Actions() {
 }
 ```
 
-Import `@creador-dev/styles` before the component stylesheet to share the repository's CSS variables.
+Component styles load automatically with their components. Import `@creador-dev/styles` once in the application to use the shared theme variables and global foundations.
 
+The static `@creador-dev/components/styles.css` export remains available for environments that disable runtime style injection.

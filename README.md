@@ -4,6 +4,7 @@ A small, reusable monorepo for shared frontend building blocks. Add packages her
 
 ## Packages
 
+- `@creador-dev/shared-kit` — convenient entry point for the complete toolkit
 - `@creador-dev/hooks` — framework hooks for React applications
 - `@creador-dev/components` — accessible React UI primitives
 - `@creador-dev/styles` — CSS variables, reset, and shared utility classes
@@ -33,6 +34,18 @@ During local app development, add a package with the workspace protocol:
 ```
 
 For applications outside this monorepo, publish packages to GitHub Packages or npm and install them by version.
+
+Use the umbrella package when an application needs the complete toolkit:
+
+```ts
+import { Button, clamp, useMediaQuery } from "@creador-dev/shared-kit";
+```
+
+Global tokens and reset styles remain opt-in:
+
+```css
+@import "@creador-dev/shared-kit/styles.css";
+```
 
 ## Releases
 

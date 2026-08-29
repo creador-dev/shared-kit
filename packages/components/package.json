@@ -6,10 +6,7 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "files": [
-    "dist",
-    "src/styles.css"
-  ],
+  "files": ["dist", "src/*.css"],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +18,7 @@
     "./styles.css": "./src/styles.css"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --external react",
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --external react --inject-style",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit"
   },
