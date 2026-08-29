@@ -8,6 +8,10 @@ A small, reusable monorepo for shared frontend building blocks. Add packages her
 - `@base/styles` — CSS variables, reset, and shared utility classes
 - `@base/utils` — dependency-free TypeScript utilities
 
+## AI skills
+
+Reusable agent instructions live in [`ai-skills/`](./ai-skills/README.md). The animation collection supports Claude Code, Codex, Cursor, Gemini, Antigravity, and Windsurf.
+
 ## Development
 
 ```bash
