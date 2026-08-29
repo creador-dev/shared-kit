@@ -1,4 +1,4 @@
-.sr-only {
+.wpxdev-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -10,8 +10,7 @@
   border: 0;
 }
 
-.container {
-  width: min(100% - (2 * var(--space-4)), 72rem);
+.wpxdev-container {
+  width: min(100% - (2 * var(--wpxdev-space-4)), 72rem);
   margin-inline: auto;
 }
-

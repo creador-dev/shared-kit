@@ -1,20 +1,33 @@
 # @creador-dev/components
 
-Accessible React UI primitives that use the design tokens from `@creador-dev/styles` when available and include sensible fallbacks.
+Accessible React UI primitives built from locally owned shadcn/ui source.
 
 ```tsx
-import { Button, Stack } from "@creador-dev/components";
+import { Button } from "@creador-dev/components";
+import "@creador-dev/components/styles.css";
 
 export function Actions() {
   return (
-    <Stack direction="row" gap="0.75rem">
+    <div>
       <Button>Save</Button>
-      <Button variant="secondary">Cancel</Button>
-    </Stack>
+      <Button variant="outline">Cancel</Button>
+    </div>
   );
 }
 ```
 
-Each component keeps its SCSS beside its React source and loads the compiled styles automatically. Import `@creador-dev/styles` once in the application to use the shared theme variables and global foundations.
+The Button also has a focused entry point:
 
-The source `@creador-dev/components/styles.scss` export remains available for Sass-based applications that disable runtime style injection.
+```tsx
+import { Button } from "@creador-dev/components/button";
+```
+
+Import the compiled stylesheet once at the application or WordPress-plugin entry point. All utilities used internally by the components and all theme variables are prefixed with `wpxdev` (for example, `wpxdev:bg-primary` and `--wpxdev-color-primary`) to avoid collisions with host styles.
+
+Add future shadcn components from this package directory so the CLI reads `components.json`:
+
+```sh
+pnpm exec shadcn add dialog
+```
+
+Use `.wpxdev-dark` on a containing element to activate the dark theme.

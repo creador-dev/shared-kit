@@ -1,0 +1,63 @@
+@layer theme, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme) prefix(wpxdev);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(wpxdev);
+@import "tw-animate-css" prefix(wpxdev);
+
+@source "./**/*.{ts,tsx}";
+
+@custom-variant dark (&:where(.wpxdev-dark, .wpxdev-dark *));
+
+@theme {
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.145 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.145 0 0);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0 0);
+  --color-primary: oklch(0.205 0 0);
+  --color-primary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.97 0 0);
+  --color-secondary-foreground: oklch(0.205 0 0);
+  --color-muted: oklch(0.97 0 0);
+  --color-muted-foreground: oklch(0.556 0 0);
+  --color-accent: oklch(0.97 0 0);
+  --color-accent-foreground: oklch(0.205 0 0);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-border: oklch(0.922 0 0);
+  --color-input: oklch(0.922 0 0);
+  --color-ring: oklch(0.708 0 0);
+
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.12);
+}
+
+.wpxdev-dark {
+  --wpxdev-color-background: oklch(0.145 0 0);
+  --wpxdev-color-foreground: oklch(0.985 0 0);
+  --wpxdev-color-card: oklch(0.205 0 0);
+  --wpxdev-color-card-foreground: oklch(0.985 0 0);
+  --wpxdev-color-popover: oklch(0.205 0 0);
+  --wpxdev-color-popover-foreground: oklch(0.985 0 0);
+  --wpxdev-color-primary: oklch(0.922 0 0);
+  --wpxdev-color-primary-foreground: oklch(0.205 0 0);
+  --wpxdev-color-secondary: oklch(0.269 0 0);
+  --wpxdev-color-secondary-foreground: oklch(0.985 0 0);
+  --wpxdev-color-muted: oklch(0.269 0 0);
+  --wpxdev-color-muted-foreground: oklch(0.708 0 0);
+  --wpxdev-color-accent: oklch(0.269 0 0);
+  --wpxdev-color-accent-foreground: oklch(0.985 0 0);
+  --wpxdev-color-destructive: oklch(0.704 0.191 22.216);
+  --wpxdev-color-border: oklch(1 0 0 / 10%);
+  --wpxdev-color-input: oklch(1 0 0 / 15%);
+  --wpxdev-color-ring: oklch(0.556 0 0);
+}

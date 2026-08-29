@@ -1,31 +1,26 @@
-*,
-*::before,
-*::after {
+.wpxdev-root,
+.wpxdev-root *,
+.wpxdev-root *::before,
+.wpxdev-root *::after {
   box-sizing: border-box;
 }
 
-html {
-  font-family: var(--font-sans);
-  color: var(--color-foreground);
-  background: var(--color-background);
+.wpxdev-root {
+  font-family: var(--wpxdev-font-sans);
+  color: var(--wpxdev-color-foreground);
+  background: var(--wpxdev-color-background);
 }
 
-body {
-  min-height: 100vh;
-  margin: 0;
-}
-
-img,
-svg,
-video {
+.wpxdev-root img,
+.wpxdev-root svg,
+.wpxdev-root video {
   display: block;
   max-width: 100%;
 }
 
-button,
-input,
-textarea,
-select {
+.wpxdev-root button,
+.wpxdev-root input,
+.wpxdev-root textarea,
+.wpxdev-root select {
   font: inherit;
 }
-

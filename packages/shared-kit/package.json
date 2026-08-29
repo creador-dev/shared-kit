@@ -18,10 +18,42 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./components/button": {
+      "types": "./dist/components/button.d.ts",
+      "import": "./dist/components/button.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.js"
+    },
+    "./hooks/use-debounced-value": {
+      "types": "./dist/hooks/use-debounced-value.d.ts",
+      "import": "./dist/hooks/use-debounced-value.js"
+    },
+    "./hooks/use-media-query": {
+      "types": "./dist/hooks/use-media-query.d.ts",
+      "import": "./dist/hooks/use-media-query.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js"
+    },
+    "./utils/clamp": {
+      "types": "./dist/utils/clamp.d.ts",
+      "import": "./dist/utils/clamp.js"
+    },
+    "./utils/cn": {
+      "types": "./dist/utils/cn.d.ts",
+      "import": "./dist/utils/cn.js"
+    },
     "./styles.css": "./src/styles.css"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --external react",
+    "build": "tsup src/index.ts src/components/index.ts src/components/button.ts src/hooks/index.ts src/hooks/use-debounced-value.ts src/hooks/use-media-query.ts src/utils/index.ts src/utils/clamp.ts src/utils/cn.ts --format esm --dts --sourcemap --clean --external react",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit"
   },
