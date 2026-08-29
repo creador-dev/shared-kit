@@ -1,9 +1,13 @@
 {
   "name": "@creador-dev/styles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared CSS tokens, reset, and utilities",
-  "sideEffects": ["**/*.css"],
-  "files": ["src"],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "src"
+  ],
   "exports": {
     ".": "./src/index.css",
     "./tokens.css": "./src/tokens.css",
