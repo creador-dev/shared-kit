@@ -1,6 +1,6 @@
 {
   "name": "@creador-dev/shared-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Complete collection of reusable Creador frontend packages",
   "type": "module",
   "sideEffects": [
