@@ -1,5 +1,5 @@
 {
-  "name": "base",
+  "name": "shared-kit",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.18.3",
@@ -22,4 +22,3 @@
     "vitest": "^3.2.4"
   }
 }
-

@@ -1,4 +1,4 @@
-# base
+# shared-kit
 
 A small, reusable monorepo for shared frontend building blocks. Add packages here once, then consume them from future applications through workspace dependencies or a package registry.
 
@@ -35,4 +35,3 @@ For applications outside this monorepo, publish packages to GitHub Packages or n
 2. Give it a scoped name and explicit `exports` in `package.json`.
 3. Add source code, tests, and a package README.
 4. Run `pnpm changeset` to describe a publishable change.
-
