@@ -1,3 +1,3 @@
-# @creador-dev/utils
+# @crdev/utils
 
-Shared dependency-free utilities. Import named exports from `@creador-dev/utils`.
+Shared dependency-free utilities. Import named exports from `@crdev/utils`.
