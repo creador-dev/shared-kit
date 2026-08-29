@@ -1,10 +1,12 @@
 {
   "name": "@creador-dev/utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared, dependency-free TypeScript utilities",
   "type": "module",
   "sideEffects": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
