@@ -1,7 +1,7 @@
-# @crdev/utils
+# @creador-dev/utils
 
 ## 0.1.1
 
 ### Patch Changes
 
-- 689df5c: Prepare the shared packages for their first automated npm release under the `@crdev` scope.
+- 689df5c: Prepare the shared packages for their first automated npm release under the `@creador-dev` scope.

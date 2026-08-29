@@ -1,9 +1,9 @@
-# @crdev/styles
+# @creador-dev/styles
 
 Import everything:
 
 ```css
-@import "@crdev/styles";
+@import "@creador-dev/styles";
 ```
 
-Or import only the layer you need, such as `@crdev/styles/tokens.css`.
+Or import only the layer you need, such as `@creador-dev/styles/tokens.css`.

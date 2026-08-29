@@ -1,5 +1,5 @@
 {
-  "name": "@crdev/utils",
+  "name": "@creador-dev/utils",
   "version": "0.1.1",
   "description": "Shared, dependency-free TypeScript utilities",
   "type": "module",

@@ -4,9 +4,9 @@ A small, reusable monorepo for shared frontend building blocks. Add packages her
 
 ## Packages
 
-- `@crdev/hooks` — framework hooks for React applications
-- `@crdev/styles` — CSS variables, reset, and shared utility classes
-- `@crdev/utils` — dependency-free TypeScript utilities
+- `@creador-dev/hooks` — framework hooks for React applications
+- `@creador-dev/styles` — CSS variables, reset, and shared utility classes
+- `@creador-dev/utils` — dependency-free TypeScript utilities
 
 ## AI skills
 
@@ -26,7 +26,7 @@ During local app development, add a package with the workspace protocol:
 ```json
 {
   "dependencies": {
-    "@crdev/utils": "workspace:*"
+    "@creador-dev/utils": "workspace:*"
   }
 }
 ```
@@ -43,7 +43,7 @@ pnpm changeset
 
 Use `pnpm changeset --empty` for changes that intentionally do not require a release. When changesets reach `main`, GitHub Actions creates or updates a `Version Packages` pull request. Merging that pull request publishes the new package versions to npm and creates GitHub releases.
 
-Repository setup requires an npm automation or granular access token saved as the GitHub Actions secret `NPM_TOKEN`. The token must have permission to publish the `@crdev` scope.
+Repository setup requires an npm automation or granular access token saved as the GitHub Actions secret `NPM_TOKEN`. The token must have permission to publish the `@creador-dev` scope.
 
 ## Adding a package
 

@@ -1,5 +1,5 @@
 {
-  "name": "@crdev/styles",
+  "name": "@creador-dev/styles",
   "version": "0.1.1",
   "description": "Shared CSS tokens, reset, and utilities",
   "sideEffects": [
