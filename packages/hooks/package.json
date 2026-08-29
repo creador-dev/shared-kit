@@ -1,5 +1,5 @@
 {
-  "name": "@base/hooks",
+  "name": "@creador-dev/hooks",
   "version": "0.1.0",
   "description": "Reusable React hooks",
   "type": "module",
@@ -23,7 +23,6 @@
     "react": ">=18"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
-

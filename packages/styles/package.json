@@ -1,5 +1,5 @@
 {
-  "name": "@base/styles",
+  "name": "@creador-dev/styles",
   "version": "0.1.0",
   "description": "Shared CSS tokens, reset, and utilities",
   "sideEffects": ["**/*.css"],
@@ -14,7 +14,6 @@
     "build": "node -e \"console.log('CSS package is source-distributed')\""
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
-

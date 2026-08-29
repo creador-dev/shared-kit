@@ -10,7 +10,8 @@
     "test": "pnpm --recursive --if-present test",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "changeset:status": "changeset status --since=origin/main"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.7",

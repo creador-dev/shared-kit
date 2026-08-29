@@ -1,5 +1,5 @@
 {
-  "name": "@base/utils",
+  "name": "@creador-dev/utils",
   "version": "0.1.0",
   "description": "Shared, dependency-free TypeScript utilities",
   "type": "module",
@@ -21,7 +21,6 @@
     "test": "vitest run"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }
-
