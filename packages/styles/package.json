@@ -1,21 +1,28 @@
 {
   "name": "@creador-dev/styles",
   "version": "0.1.1",
-  "description": "Shared CSS tokens, reset, and utilities",
+  "description": "Shared SCSS tokens, reset, and global utilities",
   "sideEffects": [
-    "**/*.css"
+    "**/*.css",
+    "**/*.scss"
   ],
   "files": [
+    "dist",
     "src"
   ],
   "exports": {
-    ".": "./src/index.css",
-    "./tokens.css": "./src/tokens.css",
-    "./reset.css": "./src/reset.css",
-    "./utilities.css": "./src/utilities.css"
+    ".": "./dist/index.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./reset.css": "./dist/reset.css",
+    "./utilities.css": "./dist/utilities.css",
+    "./index.scss": "./src/index.scss",
+    "./tokens.scss": "./src/tokens.scss",
+    "./reset.scss": "./src/reset.scss",
+    "./utilities.scss": "./src/utilities.scss"
   },
   "scripts": {
-    "build": "node -e \"console.log('CSS package is source-distributed')\""
+    "build": "sass src:dist --no-error-css --style=compressed --source-map",
+    "clean": "rm -rf dist"
   },
   "publishConfig": {
     "access": "public"
