@@ -12,6 +12,7 @@ concurrency:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   release:
@@ -26,12 +27,14 @@ jobs:
       - name: Set up pnpm
         uses: pnpm/action-setup@v6
 
-      - name: Set up Node.js and npm registry
+      - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
+
+      - name: Set up trusted publishing-compatible npm
+        run: npm install --global npm@11 && npm --version
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -47,6 +50,3 @@ jobs:
           createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
