@@ -1,0 +1,30 @@
+{
+  "name": "@creador-dev/components",
+  "version": "0.0.0",
+  "description": "Accessible, reusable React UI primitives",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "files": ["dist", "src/styles.css"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./src/styles.css"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --sourcemap --clean --external react",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
+

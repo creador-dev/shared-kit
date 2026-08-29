@@ -5,6 +5,7 @@ A small, reusable monorepo for shared frontend building blocks. Add packages her
 ## Packages
 
 - `@creador-dev/hooks` — framework hooks for React applications
+- `@creador-dev/components` — accessible React UI primitives
 - `@creador-dev/styles` — CSS variables, reset, and shared utility classes
 - `@creador-dev/utils` — dependency-free TypeScript utilities
 
