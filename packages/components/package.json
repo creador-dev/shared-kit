@@ -1,10 +1,15 @@
 {
   "name": "@creador-dev/components",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Accessible, reusable React UI primitives",
   "type": "module",
-  "sideEffects": ["**/*.css"],
-  "files": ["dist", "src/styles.css"],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "src/styles.css"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -27,4 +32,3 @@
     "access": "public"
   }
 }
-
