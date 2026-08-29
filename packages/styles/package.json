@@ -1,6 +1,6 @@
 {
   "name": "@creador-dev/styles",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared SCSS tokens, reset, and global utilities",
   "sideEffects": [
     "**/*.css",
