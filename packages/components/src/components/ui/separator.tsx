@@ -17,7 +17,7 @@ function Separator({
       decorative={decorative}
       orientation={orientation}
       className={cn(
-        "wpxdev:shrink-0 wpxdev:bg-border wpxdev:data-[orientation=horizontal]:h-px wpxdev:data-[orientation=horizontal]:w-full wpxdev:data-[orientation=vertical]:h-full wpxdev:data-[orientation=vertical]:w-px",
+        "shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px",
         className
       )}
       {...props}

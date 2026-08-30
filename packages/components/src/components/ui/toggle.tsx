@@ -5,18 +5,18 @@ import { Toggle as TogglePrimitive } from "radix-ui"
 import { cn } from "#lib/utils"
 
 const toggleVariants = cva(
-  "wpxdev:inline-flex wpxdev:items-center wpxdev:justify-center wpxdev:gap-2 wpxdev:rounded-md wpxdev:text-sm wpxdev:font-medium wpxdev:whitespace-nowrap wpxdev:transition-[color,box-shadow] wpxdev:outline-none wpxdev:hover:bg-muted wpxdev:hover:text-muted-foreground wpxdev:focus-visible:border-ring wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50 wpxdev:disabled:pointer-events-none wpxdev:disabled:opacity-50 wpxdev:aria-invalid:border-destructive wpxdev:aria-invalid:ring-destructive/20 wpxdev:data-[state=on]:bg-accent wpxdev:data-[state=on]:text-accent-foreground wpxdev:dark:aria-invalid:ring-destructive/40 wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg]:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4",
+  "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-[color,box-shadow] outline-none hover:bg-muted hover:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4",
   {
     variants: {
       variant: {
-        default: "wpxdev:bg-transparent",
+        default: "bg-transparent",
         outline:
-          "wpxdev:border wpxdev:border-input wpxdev:bg-transparent wpxdev:shadow-xs wpxdev:hover:bg-accent wpxdev:hover:text-accent-foreground",
+          "border border-input bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground",
       },
       size: {
-        default: "wpxdev:h-9 wpxdev:min-w-9 wpxdev:px-2",
-        sm: "wpxdev:h-8 wpxdev:min-w-8 wpxdev:px-1.5",
-        lg: "wpxdev:h-10 wpxdev:min-w-10 wpxdev:px-2.5",
+        default: "h-9 min-w-9 px-2",
+        sm: "h-8 min-w-8 px-1.5",
+        lg: "h-10 min-w-10 px-2.5",
       },
     },
     defaultVariants: {

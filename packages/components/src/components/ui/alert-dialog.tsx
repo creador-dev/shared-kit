@@ -36,7 +36,7 @@ function AlertDialogOverlay({
     <AlertDialogPrimitive.Overlay
       data-slot="alert-dialog-overlay"
       className={cn(
-        "wpxdev:fixed wpxdev:inset-0 wpxdev:z-50 wpxdev:bg-black/50 wpxdev:data-[state=closed]:animate-out wpxdev:data-[state=closed]:fade-out-0 wpxdev:data-[state=open]:animate-in wpxdev:data-[state=open]:fade-in-0",
+        "fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0",
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ function AlertDialogContent({
         data-slot="alert-dialog-content"
         data-size={size}
         className={cn(
-          "wpxdev:group/alert-dialog-content wpxdev:fixed wpxdev:top-[50%] wpxdev:left-[50%] wpxdev:z-50 wpxdev:grid wpxdev:w-full wpxdev:max-w-[calc(100%-2rem)] wpxdev:translate-x-[-50%] wpxdev:translate-y-[-50%] wpxdev:gap-4 wpxdev:rounded-lg wpxdev:border wpxdev:bg-background wpxdev:p-6 wpxdev:shadow-lg wpxdev:duration-200 wpxdev:data-[size=sm]:max-w-xs wpxdev:data-[state=closed]:animate-out wpxdev:data-[state=closed]:fade-out-0 wpxdev:data-[state=closed]:zoom-out-95 wpxdev:data-[state=open]:animate-in wpxdev:data-[state=open]:fade-in-0 wpxdev:data-[state=open]:zoom-in-95 wpxdev:data-[size=default]:sm:max-w-lg",
+          "group/alert-dialog-content fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border bg-background p-6 shadow-lg duration-200 data-[size=sm]:max-w-xs data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[size=default]:sm:max-w-lg",
           className
         )}
         {...props}
@@ -75,7 +75,7 @@ function AlertDialogHeader({
     <div
       data-slot="alert-dialog-header"
       className={cn(
-        "wpxdev:grid wpxdev:grid-rows-[auto_1fr] wpxdev:place-items-center wpxdev:gap-1.5 wpxdev:text-center wpxdev:has-data-[slot=alert-dialog-media]:grid-rows-[auto_auto_1fr] wpxdev:has-data-[slot=alert-dialog-media]:gap-x-6 wpxdev:sm:group-data-[size=default]/alert-dialog-content:place-items-start wpxdev:sm:group-data-[size=default]/alert-dialog-content:text-left wpxdev:sm:group-data-[size=default]/alert-dialog-content:has-data-[slot=alert-dialog-media]:grid-rows-[auto_1fr]",
+        "grid grid-rows-[auto_1fr] place-items-center gap-1.5 text-center has-data-[slot=alert-dialog-media]:grid-rows-[auto_auto_1fr] has-data-[slot=alert-dialog-media]:gap-x-6 sm:group-data-[size=default]/alert-dialog-content:place-items-start sm:group-data-[size=default]/alert-dialog-content:text-left sm:group-data-[size=default]/alert-dialog-content:has-data-[slot=alert-dialog-media]:grid-rows-[auto_1fr]",
         className
       )}
       {...props}
@@ -91,7 +91,7 @@ function AlertDialogFooter({
     <div
       data-slot="alert-dialog-footer"
       className={cn(
-        "wpxdev:flex wpxdev:flex-col-reverse wpxdev:gap-2 wpxdev:group-data-[size=sm]/alert-dialog-content:grid wpxdev:group-data-[size=sm]/alert-dialog-content:grid-cols-2 wpxdev:sm:flex-row wpxdev:sm:justify-end",
+        "flex flex-col-reverse gap-2 group-data-[size=sm]/alert-dialog-content:grid group-data-[size=sm]/alert-dialog-content:grid-cols-2 sm:flex-row sm:justify-end",
         className
       )}
       {...props}
@@ -107,7 +107,7 @@ function AlertDialogTitle({
     <AlertDialogPrimitive.Title
       data-slot="alert-dialog-title"
       className={cn(
-        "wpxdev:text-lg wpxdev:font-semibold wpxdev:sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
+        "text-lg font-semibold sm:group-data-[size=default]/alert-dialog-content:group-has-data-[slot=alert-dialog-media]/alert-dialog-content:col-start-2",
         className
       )}
       {...props}
@@ -122,7 +122,7 @@ function AlertDialogDescription({
   return (
     <AlertDialogPrimitive.Description
       data-slot="alert-dialog-description"
-      className={cn("wpxdev:text-sm wpxdev:text-muted-foreground", className)}
+      className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
   )
@@ -136,7 +136,7 @@ function AlertDialogMedia({
     <div
       data-slot="alert-dialog-media"
       className={cn(
-        "wpxdev:mb-2 wpxdev:inline-flex wpxdev:size-16 wpxdev:items-center wpxdev:justify-center wpxdev:rounded-md wpxdev:bg-muted wpxdev:sm:group-data-[size=default]/alert-dialog-content:row-span-2 wpxdev:*:[svg:not([class*=size-])]:size-8",
+        "mb-2 inline-flex size-16 items-center justify-center rounded-md bg-muted sm:group-data-[size=default]/alert-dialog-content:row-span-2 *:[svg:not([class*=size-])]:size-8",
         className
       )}
       {...props}

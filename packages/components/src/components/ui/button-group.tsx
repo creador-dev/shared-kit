@@ -5,14 +5,14 @@ import { cn } from "#lib/utils"
 import { Separator } from "#components/ui/separator"
 
 const buttonGroupVariants = cva(
-  "wpxdev:flex wpxdev:w-fit wpxdev:items-stretch wpxdev:has-[>[data-slot=button-group]]:gap-2 wpxdev:[&>*]:focus-visible:relative wpxdev:[&>*]:focus-visible:z-10 wpxdev:has-[select[aria-hidden=true]:last-child]:[&>[data-slot=select-trigger]:last-of-type]:rounded-r-md wpxdev:[&>[data-slot=select-trigger]:not([class*=w-])]:w-fit wpxdev:[&>input]:flex-1",
+  "flex w-fit items-stretch has-[>[data-slot=button-group]]:gap-2 [&>*]:focus-visible:relative [&>*]:focus-visible:z-10 has-[select[aria-hidden=true]:last-child]:[&>[data-slot=select-trigger]:last-of-type]:rounded-r-md [&>[data-slot=select-trigger]:not([class*=w-])]:w-fit [&>input]:flex-1",
   {
     variants: {
       orientation: {
         horizontal:
-          "wpxdev:[&>*:not(:first-child)]:rounded-l-none wpxdev:[&>*:not(:first-child)]:border-l-0 wpxdev:[&>*:not(:last-child)]:rounded-r-none",
+          "[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none",
         vertical:
-          "wpxdev:flex-col wpxdev:[&>*:not(:first-child)]:rounded-t-none wpxdev:[&>*:not(:first-child)]:border-t-0 wpxdev:[&>*:not(:last-child)]:rounded-b-none",
+          "flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none",
       },
     },
     defaultVariants: {
@@ -49,7 +49,7 @@ function ButtonGroupText({
   return (
     <Comp
       className={cn(
-        "wpxdev:flex wpxdev:items-center wpxdev:gap-2 wpxdev:rounded-md wpxdev:border wpxdev:bg-muted wpxdev:px-4 wpxdev:text-sm wpxdev:font-medium wpxdev:shadow-xs wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg:not([class*=size-])]:size-4",
+        "flex items-center gap-2 rounded-md border bg-muted px-4 text-sm font-medium shadow-xs [&_svg]:pointer-events-none [&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
@@ -67,7 +67,7 @@ function ButtonGroupSeparator({
       data-slot="button-group-separator"
       orientation={orientation}
       className={cn(
-        "wpxdev:relative wpxdev:m-0! wpxdev:self-stretch wpxdev:bg-input wpxdev:data-[orientation=vertical]:h-auto",
+        "relative m-0! self-stretch bg-input data-[orientation=vertical]:h-auto",
         className
       )}
       {...props}

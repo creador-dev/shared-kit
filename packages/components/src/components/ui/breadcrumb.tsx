@@ -13,7 +13,7 @@ function BreadcrumbList({ className, ...props }: React.ComponentProps<"ol">) {
     <ol
       data-slot="breadcrumb-list"
       className={cn(
-        "wpxdev:flex wpxdev:flex-wrap wpxdev:items-center wpxdev:gap-1.5 wpxdev:text-sm wpxdev:break-words wpxdev:text-muted-foreground wpxdev:sm:gap-2.5",
+        "flex flex-wrap items-center gap-1.5 text-sm break-words text-muted-foreground sm:gap-2.5",
         className
       )}
       {...props}
@@ -25,7 +25,7 @@ function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
   return (
     <li
       data-slot="breadcrumb-item"
-      className={cn("wpxdev:inline-flex wpxdev:items-center wpxdev:gap-1.5", className)}
+      className={cn("inline-flex items-center gap-1.5", className)}
       {...props}
     />
   )
@@ -43,7 +43,7 @@ function BreadcrumbLink({
   return (
     <Comp
       data-slot="breadcrumb-link"
-      className={cn("wpxdev:transition-colors wpxdev:hover:text-foreground", className)}
+      className={cn("transition-colors hover:text-foreground", className)}
       {...props}
     />
   )
@@ -56,7 +56,7 @@ function BreadcrumbPage({ className, ...props }: React.ComponentProps<"span">) {
       role="link"
       aria-disabled="true"
       aria-current="page"
-      className={cn("wpxdev:font-normal wpxdev:text-foreground", className)}
+      className={cn("font-normal text-foreground", className)}
       {...props}
     />
   )
@@ -72,7 +72,7 @@ function BreadcrumbSeparator({
       data-slot="breadcrumb-separator"
       role="presentation"
       aria-hidden="true"
-      className={cn("wpxdev:[&>svg]:size-3.5", className)}
+      className={cn("[&>svg]:size-3.5", className)}
       {...props}
     >
       {children ?? <ChevronRight />}
@@ -89,11 +89,11 @@ function BreadcrumbEllipsis({
       data-slot="breadcrumb-ellipsis"
       role="presentation"
       aria-hidden="true"
-      className={cn("wpxdev:flex wpxdev:size-9 wpxdev:items-center wpxdev:justify-center", className)}
+      className={cn("flex size-9 items-center justify-center", className)}
       {...props}
     >
-      <MoreHorizontal className="wpxdev:size-4" />
-      <span className="wpxdev:sr-only">More</span>
+      <MoreHorizontal className="size-4" />
+      <span className="sr-only">More</span>
     </span>
   )
 }

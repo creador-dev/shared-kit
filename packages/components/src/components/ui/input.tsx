@@ -8,9 +8,9 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "wpxdev:h-9 wpxdev:w-full wpxdev:min-w-0 wpxdev:rounded-md wpxdev:border wpxdev:border-input wpxdev:bg-transparent wpxdev:px-3 wpxdev:py-1 wpxdev:text-base wpxdev:shadow-xs wpxdev:transition-[color,box-shadow] wpxdev:outline-none wpxdev:selection:bg-primary wpxdev:selection:text-primary-foreground wpxdev:file:inline-flex wpxdev:file:h-7 wpxdev:file:border-0 wpxdev:file:bg-transparent wpxdev:file:text-sm wpxdev:file:font-medium wpxdev:file:text-foreground wpxdev:placeholder:text-muted-foreground wpxdev:disabled:pointer-events-none wpxdev:disabled:cursor-not-allowed wpxdev:disabled:opacity-50 wpxdev:md:text-sm wpxdev:dark:bg-input/30",
-        "wpxdev:focus-visible:border-ring wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50",
-        "wpxdev:aria-invalid:border-destructive wpxdev:aria-invalid:ring-destructive/20 wpxdev:dark:aria-invalid:ring-destructive/40",
+        "h-9 w-full min-w-0 rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:bg-input/30",
+        "focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50",
+        "aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40",
         className
       )}
       {...props}

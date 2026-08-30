@@ -5,14 +5,14 @@ import { Slot } from "radix-ui"
 import { cn } from "#lib/utils"
 
 const markerVariants = cva(
-  "wpxdev:group/marker wpxdev:relative wpxdev:flex wpxdev:min-h-4 wpxdev:w-full wpxdev:items-center wpxdev:gap-2 wpxdev:text-left wpxdev:text-sm wpxdev:text-muted-foreground wpxdev:[&_svg:not([class*=size-])]:size-4 wpxdev:[a]:underline wpxdev:[a]:underline-offset-3 wpxdev:[a]:hover:text-foreground",
+  "group/marker relative flex min-h-4 w-full items-center gap-2 text-left text-sm text-muted-foreground [&_svg:not([class*=size-])]:size-4 [a]:underline [a]:underline-offset-3 [a]:hover:text-foreground",
   {
     variants: {
       variant: {
-        default: "wpxdev:",
+        default: "",
         separator:
-          "wpxdev:before:mr-1 wpxdev:before:h-px wpxdev:before:min-w-0 wpxdev:before:flex-1 wpxdev:before:bg-border wpxdev:after:ml-1 wpxdev:after:h-px wpxdev:after:min-w-0 wpxdev:after:flex-1 wpxdev:after:bg-border",
-        border: "wpxdev:border-b wpxdev:border-border wpxdev:pb-2",
+          "before:mr-1 before:h-px before:min-w-0 before:flex-1 before:bg-border after:ml-1 after:h-px after:min-w-0 after:flex-1 after:bg-border",
+        border: "border-b border-border pb-2",
       },
     },
   }
@@ -45,7 +45,7 @@ function MarkerIcon({ className, ...props }: React.ComponentProps<"span">) {
       data-slot="marker-icon"
       aria-hidden="true"
       className={cn(
-        "wpxdev:size-4 wpxdev:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4",
+        "size-4 shrink-0 [&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ function MarkerContent({ className, ...props }: React.ComponentProps<"span">) {
     <span
       data-slot="marker-content"
       className={cn(
-        "wpxdev:min-w-0 wpxdev:wrap-break-word wpxdev:group-data-[variant=separator]/marker:flex-none wpxdev:group-data-[variant=separator]/marker:text-center wpxdev:*:[a]:underline wpxdev:*:[a]:underline-offset-3 wpxdev:*:[a]:hover:text-foreground",
+        "min-w-0 wrap-break-word group-data-[variant=separator]/marker:flex-none group-data-[variant=separator]/marker:text-center *:[a]:underline *:[a]:underline-offset-3 *:[a]:hover:text-foreground",
         className
       )}
       {...props}

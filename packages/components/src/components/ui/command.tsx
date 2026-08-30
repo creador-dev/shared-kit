@@ -19,7 +19,7 @@ function Command({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "wpxdev:flex wpxdev:h-full wpxdev:w-full wpxdev:flex-col wpxdev:overflow-hidden wpxdev:rounded-md wpxdev:bg-popover wpxdev:text-popover-foreground",
+        "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
         className
       )}
       {...props}
@@ -42,15 +42,15 @@ function CommandDialog({
 }) {
   return (
     <Dialog {...props}>
-      <DialogHeader className="wpxdev:sr-only">
+      <DialogHeader className="sr-only">
         <DialogTitle>{title}</DialogTitle>
         <DialogDescription>{description}</DialogDescription>
       </DialogHeader>
       <DialogContent
-        className={cn("wpxdev:overflow-hidden wpxdev:p-0", className)}
+        className={cn("overflow-hidden p-0", className)}
         showCloseButton={showCloseButton}
       >
-        <Command className="wpxdev:**:data-[slot=command-input-wrapper]:h-12 wpxdev:[&_[cmdk-group-heading]]:px-2 wpxdev:[&_[cmdk-group-heading]]:font-medium wpxdev:[&_[cmdk-group-heading]]:text-muted-foreground wpxdev:[&_[cmdk-group]]:px-2 wpxdev:[&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 wpxdev:[&_[cmdk-input-wrapper]_svg]:h-5 wpxdev:[&_[cmdk-input-wrapper]_svg]:w-5 wpxdev:[&_[cmdk-input]]:h-12 wpxdev:[&_[cmdk-item]]:px-2 wpxdev:[&_[cmdk-item]]:py-3 wpxdev:[&_[cmdk-item]_svg]:h-5 wpxdev:[&_[cmdk-item]_svg]:w-5">
+        <Command className="**:data-[slot=command-input-wrapper]:h-12 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]]:px-2 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
         </Command>
       </DialogContent>
@@ -65,13 +65,13 @@ function CommandInput({
   return (
     <div
       data-slot="command-input-wrapper"
-      className="wpxdev:flex wpxdev:h-9 wpxdev:items-center wpxdev:gap-2 wpxdev:border-b wpxdev:px-3"
+      className="flex h-9 items-center gap-2 border-b px-3"
     >
-      <SearchIcon className="wpxdev:size-4 wpxdev:shrink-0 wpxdev:opacity-50" />
+      <SearchIcon className="size-4 shrink-0 opacity-50" />
       <CommandPrimitive.Input
         data-slot="command-input"
         className={cn(
-          "wpxdev:flex wpxdev:h-10 wpxdev:w-full wpxdev:rounded-md wpxdev:bg-transparent wpxdev:py-3 wpxdev:text-sm wpxdev:outline-hidden wpxdev:placeholder:text-muted-foreground wpxdev:disabled:cursor-not-allowed wpxdev:disabled:opacity-50",
+          "flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props}
@@ -88,7 +88,7 @@ function CommandList({
     <CommandPrimitive.List
       data-slot="command-list"
       className={cn(
-        "wpxdev:max-h-[300px] wpxdev:scroll-py-1 wpxdev:overflow-x-hidden wpxdev:overflow-y-auto",
+        "max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto",
         className
       )}
       {...props}
@@ -102,7 +102,7 @@ function CommandEmpty({
   return (
     <CommandPrimitive.Empty
       data-slot="command-empty"
-      className="wpxdev:py-6 wpxdev:text-center wpxdev:text-sm"
+      className="py-6 text-center text-sm"
       {...props}
     />
   )
@@ -116,7 +116,7 @@ function CommandGroup({
     <CommandPrimitive.Group
       data-slot="command-group"
       className={cn(
-        "wpxdev:overflow-hidden wpxdev:p-1 wpxdev:text-foreground wpxdev:[&_[cmdk-group-heading]]:px-2 wpxdev:[&_[cmdk-group-heading]]:py-1.5 wpxdev:[&_[cmdk-group-heading]]:text-xs wpxdev:[&_[cmdk-group-heading]]:font-medium wpxdev:[&_[cmdk-group-heading]]:text-muted-foreground",
+        "overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground",
         className
       )}
       {...props}
@@ -131,7 +131,7 @@ function CommandSeparator({
   return (
     <CommandPrimitive.Separator
       data-slot="command-separator"
-      className={cn("wpxdev:-mx-1 wpxdev:h-px wpxdev:bg-border", className)}
+      className={cn("-mx-1 h-px bg-border", className)}
       {...props}
     />
   )
@@ -145,7 +145,7 @@ function CommandItem({
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        "wpxdev:relative wpxdev:flex wpxdev:cursor-default wpxdev:items-center wpxdev:gap-2 wpxdev:rounded-sm wpxdev:px-2 wpxdev:py-1.5 wpxdev:text-sm wpxdev:outline-hidden wpxdev:select-none wpxdev:data-[disabled=true]:pointer-events-none wpxdev:data-[disabled=true]:opacity-50 wpxdev:data-[selected=true]:bg-accent wpxdev:data-[selected=true]:text-accent-foreground wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg]:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4 wpxdev:[&_svg:not([class*=text-])]:text-muted-foreground",
+        "relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4 [&_svg:not([class*=text-])]:text-muted-foreground",
         className
       )}
       {...props}
@@ -161,7 +161,7 @@ function CommandShortcut({
     <span
       data-slot="command-shortcut"
       className={cn(
-        "wpxdev:ml-auto wpxdev:text-xs wpxdev:tracking-widest wpxdev:text-muted-foreground",
+        "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}
       {...props}

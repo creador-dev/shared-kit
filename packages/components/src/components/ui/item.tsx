@@ -10,7 +10,7 @@ function ItemGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       role="list"
       data-slot="item-group"
-      className={cn("wpxdev:group/item-group wpxdev:flex wpxdev:flex-col", className)}
+      className={cn("group/item-group flex flex-col", className)}
       {...props}
     />
   )
@@ -24,24 +24,24 @@ function ItemSeparator({
     <Separator
       data-slot="item-separator"
       orientation="horizontal"
-      className={cn("wpxdev:my-0", className)}
+      className={cn("my-0", className)}
       {...props}
     />
   )
 }
 
 const itemVariants = cva(
-  "wpxdev:group/item wpxdev:flex wpxdev:flex-wrap wpxdev:items-center wpxdev:rounded-md wpxdev:border wpxdev:border-transparent wpxdev:text-sm wpxdev:transition-colors wpxdev:duration-100 wpxdev:outline-none wpxdev:focus-visible:border-ring wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50 wpxdev:[a]:transition-colors wpxdev:[a]:hover:bg-accent/50",
+  "group/item flex flex-wrap items-center rounded-md border border-transparent text-sm transition-colors duration-100 outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 [a]:transition-colors [a]:hover:bg-accent/50",
   {
     variants: {
       variant: {
-        default: "wpxdev:bg-transparent",
-        outline: "wpxdev:border-border",
-        muted: "wpxdev:bg-muted/50",
+        default: "bg-transparent",
+        outline: "border-border",
+        muted: "bg-muted/50",
       },
       size: {
-        default: "wpxdev:gap-4 wpxdev:p-4",
-        sm: "wpxdev:gap-2.5 wpxdev:px-4 wpxdev:py-3",
+        default: "gap-4 p-4",
+        sm: "gap-2.5 px-4 py-3",
       },
     },
     defaultVariants: {
@@ -72,14 +72,14 @@ function Item({
 }
 
 const itemMediaVariants = cva(
-  "wpxdev:flex wpxdev:shrink-0 wpxdev:items-center wpxdev:justify-center wpxdev:gap-2 wpxdev:group-has-[[data-slot=item-description]]/item:translate-y-0.5 wpxdev:group-has-[[data-slot=item-description]]/item:self-start wpxdev:[&_svg]:pointer-events-none",
+  "flex shrink-0 items-center justify-center gap-2 group-has-[[data-slot=item-description]]/item:translate-y-0.5 group-has-[[data-slot=item-description]]/item:self-start [&_svg]:pointer-events-none",
   {
     variants: {
       variant: {
-        default: "wpxdev:bg-transparent",
-        icon: "wpxdev:size-8 wpxdev:rounded-sm wpxdev:border wpxdev:bg-muted wpxdev:[&_svg:not([class*=size-])]:size-4",
+        default: "bg-transparent",
+        icon: "size-8 rounded-sm border bg-muted [&_svg:not([class*=size-])]:size-4",
         image:
-          "wpxdev:size-10 wpxdev:overflow-hidden wpxdev:rounded-sm wpxdev:[&_img]:size-full wpxdev:[&_img]:object-cover",
+          "size-10 overflow-hidden rounded-sm [&_img]:size-full [&_img]:object-cover",
       },
     },
     defaultVariants: {
@@ -108,7 +108,7 @@ function ItemContent({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-content"
       className={cn(
-        "wpxdev:flex wpxdev:flex-1 wpxdev:flex-col wpxdev:gap-1 wpxdev:[&+[data-slot=item-content]]:flex-none",
+        "flex flex-1 flex-col gap-1 [&+[data-slot=item-content]]:flex-none",
         className
       )}
       {...props}
@@ -121,7 +121,7 @@ function ItemTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-title"
       className={cn(
-        "wpxdev:flex wpxdev:w-fit wpxdev:items-center wpxdev:gap-2 wpxdev:text-sm wpxdev:leading-snug wpxdev:font-medium",
+        "flex w-fit items-center gap-2 text-sm leading-snug font-medium",
         className
       )}
       {...props}
@@ -134,8 +134,8 @@ function ItemDescription({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="item-description"
       className={cn(
-        "wpxdev:line-clamp-2 wpxdev:text-sm wpxdev:leading-normal wpxdev:font-normal wpxdev:text-balance wpxdev:text-muted-foreground",
-        "wpxdev:[&>a]:underline wpxdev:[&>a]:underline-offset-4 wpxdev:[&>a:hover]:text-primary",
+        "line-clamp-2 text-sm leading-normal font-normal text-balance text-muted-foreground",
+        "[&>a]:underline [&>a]:underline-offset-4 [&>a:hover]:text-primary",
         className
       )}
       {...props}
@@ -147,7 +147,7 @@ function ItemActions({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="item-actions"
-      className={cn("wpxdev:flex wpxdev:items-center wpxdev:gap-2", className)}
+      className={cn("flex items-center gap-2", className)}
       {...props}
     />
   )
@@ -158,7 +158,7 @@ function ItemHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-header"
       className={cn(
-        "wpxdev:flex wpxdev:basis-full wpxdev:items-center wpxdev:justify-between wpxdev:gap-2",
+        "flex basis-full items-center justify-between gap-2",
         className
       )}
       {...props}
@@ -171,7 +171,7 @@ function ItemFooter({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-footer"
       className={cn(
-        "wpxdev:flex wpxdev:basis-full wpxdev:items-center wpxdev:justify-between wpxdev:gap-2",
+        "flex basis-full items-center justify-between gap-2",
         className
       )}
       {...props}

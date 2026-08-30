@@ -25,13 +25,13 @@ function ComboboxTrigger({
   return (
     <ComboboxPrimitive.Trigger
       data-slot="combobox-trigger"
-      className={cn("wpxdev:[&_svg:not([class*=size-])]:size-4", className)}
+      className={cn("[&_svg:not([class*=size-])]:size-4", className)}
       {...props}
     >
       {children}
       <ChevronDownIcon
         data-slot="combobox-trigger-icon"
-        className="wpxdev:pointer-events-none wpxdev:size-4 wpxdev:text-muted-foreground"
+        className="pointer-events-none size-4 text-muted-foreground"
       />
     </ComboboxPrimitive.Trigger>
   )
@@ -45,7 +45,7 @@ function ComboboxClear({ className, ...props }: ComboboxPrimitive.Clear.Props) {
       className={cn(className)}
       {...props}
     >
-      <XIcon className="wpxdev:pointer-events-none" />
+      <XIcon className="pointer-events-none" />
     </ComboboxPrimitive.Clear>
   )
 }
@@ -62,7 +62,7 @@ function ComboboxInput({
   showClear?: boolean
 }) {
   return (
-    <InputGroup className={cn("wpxdev:w-auto", className)}>
+    <InputGroup className={cn("w-auto", className)}>
       <ComboboxPrimitive.Input
         render={<InputGroupInput disabled={disabled} />}
         {...props}
@@ -74,7 +74,7 @@ function ComboboxInput({
             variant="ghost"
             asChild
             data-slot="input-group-button"
-            className="wpxdev:group-has-data-[slot=combobox-clear]/input-group:hidden wpxdev:data-pressed:bg-transparent"
+            className="group-has-data-[slot=combobox-clear]/input-group:hidden data-pressed:bg-transparent"
             disabled={disabled}
           >
             <ComboboxTrigger />
@@ -108,13 +108,13 @@ function ComboboxContent({
         align={align}
         alignOffset={alignOffset}
         anchor={anchor}
-        className="wpxdev:isolate wpxdev:z-50"
+        className="isolate z-50"
       >
         <ComboboxPrimitive.Popup
           data-slot="combobox-content"
           data-chips={!!anchor}
           className={cn(
-            "wpxdev:group/combobox-content wpxdev:relative wpxdev:max-h-96 wpxdev:w-(--anchor-width) wpxdev:max-w-(--available-width) wpxdev:min-w-[calc(var(--anchor-width)+--spacing(7))] wpxdev:origin-(--transform-origin) wpxdev:overflow-hidden wpxdev:rounded-md wpxdev:bg-popover wpxdev:text-popover-foreground wpxdev:shadow-md wpxdev:ring-1 wpxdev:ring-foreground/10 wpxdev:duration-100 wpxdev:data-[chips=true]:min-w-(--anchor-width) wpxdev:data-[side=bottom]:slide-in-from-top-2 wpxdev:data-[side=left]:slide-in-from-right-2 wpxdev:data-[side=right]:slide-in-from-left-2 wpxdev:data-[side=top]:slide-in-from-bottom-2 wpxdev:*:data-[slot=input-group]:m-1 wpxdev:*:data-[slot=input-group]:mb-0 wpxdev:*:data-[slot=input-group]:h-8 wpxdev:*:data-[slot=input-group]:border-input/30 wpxdev:*:data-[slot=input-group]:bg-input/30 wpxdev:*:data-[slot=input-group]:shadow-none wpxdev:data-open:animate-in wpxdev:data-open:fade-in-0 wpxdev:data-open:zoom-in-95 wpxdev:data-closed:animate-out wpxdev:data-closed:fade-out-0 wpxdev:data-closed:zoom-out-95",
+            "group/combobox-content relative max-h-96 w-(--anchor-width) max-w-(--available-width) min-w-[calc(var(--anchor-width)+--spacing(7))] origin-(--transform-origin) overflow-hidden rounded-md bg-popover text-popover-foreground shadow-md ring-1 ring-foreground/10 duration-100 data-[chips=true]:min-w-(--anchor-width) data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 *:data-[slot=input-group]:m-1 *:data-[slot=input-group]:mb-0 *:data-[slot=input-group]:h-8 *:data-[slot=input-group]:border-input/30 *:data-[slot=input-group]:bg-input/30 *:data-[slot=input-group]:shadow-none data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95",
             className
           )}
           {...props}
@@ -129,7 +129,7 @@ function ComboboxList({ className, ...props }: ComboboxPrimitive.List.Props) {
     <ComboboxPrimitive.List
       data-slot="combobox-list"
       className={cn(
-        "wpxdev:max-h-[min(calc(--spacing(96)---spacing(9)),calc(var(--available-height)---spacing(9)))] wpxdev:scroll-py-1 wpxdev:overflow-y-auto wpxdev:p-1 wpxdev:data-empty:p-0",
+        "max-h-[min(calc(--spacing(96)---spacing(9)),calc(var(--available-height)---spacing(9)))] scroll-py-1 overflow-y-auto p-1 data-empty:p-0",
         className
       )}
       {...props}
@@ -146,7 +146,7 @@ function ComboboxItem({
     <ComboboxPrimitive.Item
       data-slot="combobox-item"
       className={cn(
-        "wpxdev:relative wpxdev:flex wpxdev:w-full wpxdev:cursor-default wpxdev:items-center wpxdev:gap-2 wpxdev:rounded-sm wpxdev:py-1.5 wpxdev:pr-8 wpxdev:pl-2 wpxdev:text-sm wpxdev:outline-hidden wpxdev:select-none wpxdev:data-highlighted:bg-accent wpxdev:data-highlighted:text-accent-foreground wpxdev:data-[disabled]:pointer-events-none wpxdev:data-[disabled]:opacity-50 wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg]:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4",
+        "relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-highlighted:bg-accent data-highlighted:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
@@ -155,10 +155,10 @@ function ComboboxItem({
       <ComboboxPrimitive.ItemIndicator
         data-slot="combobox-item-indicator"
         render={
-          <span className="wpxdev:pointer-events-none wpxdev:absolute wpxdev:right-2 wpxdev:flex wpxdev:size-4 wpxdev:items-center wpxdev:justify-center" />
+          <span className="pointer-events-none absolute right-2 flex size-4 items-center justify-center" />
         }
       >
-        <CheckIcon className="wpxdev:pointer-events-none wpxdev:size-4 wpxdev:pointer-coarse:size-5" />
+        <CheckIcon className="pointer-events-none size-4 pointer-coarse:size-5" />
       </ComboboxPrimitive.ItemIndicator>
     </ComboboxPrimitive.Item>
   )
@@ -182,7 +182,7 @@ function ComboboxLabel({
     <ComboboxPrimitive.GroupLabel
       data-slot="combobox-label"
       className={cn(
-        "wpxdev:px-2 wpxdev:py-1.5 wpxdev:text-xs wpxdev:text-muted-foreground wpxdev:pointer-coarse:px-3 wpxdev:pointer-coarse:py-2 wpxdev:pointer-coarse:text-sm",
+        "px-2 py-1.5 text-xs text-muted-foreground pointer-coarse:px-3 pointer-coarse:py-2 pointer-coarse:text-sm",
         className
       )}
       {...props}
@@ -201,7 +201,7 @@ function ComboboxEmpty({ className, ...props }: ComboboxPrimitive.Empty.Props) {
     <ComboboxPrimitive.Empty
       data-slot="combobox-empty"
       className={cn(
-        "wpxdev:hidden wpxdev:w-full wpxdev:justify-center wpxdev:py-2 wpxdev:text-center wpxdev:text-sm wpxdev:text-muted-foreground wpxdev:group-data-empty/combobox-content:flex",
+        "hidden w-full justify-center py-2 text-center text-sm text-muted-foreground group-data-empty/combobox-content:flex",
         className
       )}
       {...props}
@@ -216,7 +216,7 @@ function ComboboxSeparator({
   return (
     <ComboboxPrimitive.Separator
       data-slot="combobox-separator"
-      className={cn("wpxdev:-mx-1 wpxdev:my-1 wpxdev:h-px wpxdev:bg-border", className)}
+      className={cn("-mx-1 my-1 h-px bg-border", className)}
       {...props}
     />
   )
@@ -231,7 +231,7 @@ function ComboboxChips({
     <ComboboxPrimitive.Chips
       data-slot="combobox-chips"
       className={cn(
-        "wpxdev:flex wpxdev:min-h-9 wpxdev:flex-wrap wpxdev:items-center wpxdev:gap-1.5 wpxdev:rounded-md wpxdev:border wpxdev:border-input wpxdev:bg-transparent wpxdev:bg-clip-padding wpxdev:px-2.5 wpxdev:py-1.5 wpxdev:text-sm wpxdev:shadow-xs wpxdev:transition-[color,box-shadow] wpxdev:focus-within:border-ring wpxdev:focus-within:ring-[3px] wpxdev:focus-within:ring-ring/50 wpxdev:has-aria-invalid:border-destructive wpxdev:has-aria-invalid:ring-[3px] wpxdev:has-aria-invalid:ring-destructive/20 wpxdev:has-data-[slot=combobox-chip]:px-1.5 wpxdev:dark:bg-input/30 wpxdev:dark:has-aria-invalid:border-destructive/50 wpxdev:dark:has-aria-invalid:ring-destructive/40",
+        "flex min-h-9 flex-wrap items-center gap-1.5 rounded-md border border-input bg-transparent bg-clip-padding px-2.5 py-1.5 text-sm shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50 has-aria-invalid:border-destructive has-aria-invalid:ring-[3px] has-aria-invalid:ring-destructive/20 has-data-[slot=combobox-chip]:px-1.5 dark:bg-input/30 dark:has-aria-invalid:border-destructive/50 dark:has-aria-invalid:ring-destructive/40",
         className
       )}
       {...props}
@@ -251,7 +251,7 @@ function ComboboxChip({
     <ComboboxPrimitive.Chip
       data-slot="combobox-chip"
       className={cn(
-        "wpxdev:flex wpxdev:h-[calc(--spacing(5.5))] wpxdev:w-fit wpxdev:items-center wpxdev:justify-center wpxdev:gap-1 wpxdev:rounded-sm wpxdev:bg-muted wpxdev:px-1.5 wpxdev:text-xs wpxdev:font-medium wpxdev:whitespace-nowrap wpxdev:text-foreground wpxdev:has-disabled:pointer-events-none wpxdev:has-disabled:cursor-not-allowed wpxdev:has-disabled:opacity-50 wpxdev:has-data-[slot=combobox-chip-remove]:pr-0",
+        "flex h-[calc(--spacing(5.5))] w-fit items-center justify-center gap-1 rounded-sm bg-muted px-1.5 text-xs font-medium whitespace-nowrap text-foreground has-disabled:pointer-events-none has-disabled:cursor-not-allowed has-disabled:opacity-50 has-data-[slot=combobox-chip-remove]:pr-0",
         className
       )}
       {...props}
@@ -260,10 +260,10 @@ function ComboboxChip({
       {showRemove && (
         <ComboboxPrimitive.ChipRemove
           render={<Button variant="ghost" size="icon-xs" />}
-          className="wpxdev:-ml-1 wpxdev:opacity-50 wpxdev:hover:opacity-100"
+          className="-ml-1 opacity-50 hover:opacity-100"
           data-slot="combobox-chip-remove"
         >
-          <XIcon className="wpxdev:pointer-events-none" />
+          <XIcon className="pointer-events-none" />
         </ComboboxPrimitive.ChipRemove>
       )}
     </ComboboxPrimitive.Chip>
@@ -278,7 +278,7 @@ function ComboboxChipsInput({
   return (
     <ComboboxPrimitive.Input
       data-slot="combobox-chip-input"
-      className={cn("wpxdev:min-w-16 wpxdev:flex-1 wpxdev:outline-none", className)}
+      className={cn("min-w-16 flex-1 outline-none", className)}
       {...props}
     />
   )

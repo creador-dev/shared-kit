@@ -17,7 +17,7 @@ export function Example() {
 }
 ```
 
-Import the compiled, prefixed component styles once at the application entry point:
+Import the compiled component styles once at the application entry point:
 
 ```css
 @import "@creador-dev/shared-kit/styles.css";

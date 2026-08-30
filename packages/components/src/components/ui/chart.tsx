@@ -65,7 +65,7 @@ function ChartContainer({
         data-slot="chart"
         data-chart={chartId}
         className={cn(
-          "wpxdev:flex wpxdev:aspect-video wpxdev:justify-center wpxdev:text-xs wpxdev:[&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground wpxdev:[&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 wpxdev:[&_.recharts-curve.recharts-tooltip-cursor]:stroke-border wpxdev:[&_.recharts-dot[stroke='#fff']]:stroke-transparent wpxdev:[&_.recharts-layer]:outline-hidden wpxdev:[&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border wpxdev:[&_.recharts-radial-bar-background-sector]:fill-muted wpxdev:[&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted wpxdev:[&_.recharts-reference-line_[stroke='#ccc']]:stroke-border wpxdev:[&_.recharts-sector]:outline-hidden wpxdev:[&_.recharts-sector[stroke='#fff']]:stroke-transparent wpxdev:[&_.recharts-surface]:outline-hidden",
+          "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-hidden [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector]:outline-hidden [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-surface]:outline-hidden",
           className
         )}
         {...props}
@@ -161,7 +161,7 @@ function ChartTooltipContent({
 
     if (labelFormatter) {
       return (
-        <div className={cn("wpxdev:font-medium", labelClassName)}>
+        <div className={cn("font-medium", labelClassName)}>
           {labelFormatter(value, payload)}
         </div>
       )
@@ -171,7 +171,7 @@ function ChartTooltipContent({
       return null
     }
 
-    return <div className={cn("wpxdev:font-medium", labelClassName)}>{value}</div>
+    return <div className={cn("font-medium", labelClassName)}>{value}</div>
   }, [
     label,
     labelFormatter,
@@ -191,12 +191,12 @@ function ChartTooltipContent({
   return (
     <div
       className={cn(
-        "wpxdev:grid wpxdev:min-w-[8rem] wpxdev:items-start wpxdev:gap-1.5 wpxdev:rounded-lg wpxdev:border wpxdev:border-border/50 wpxdev:bg-background wpxdev:px-2.5 wpxdev:py-1.5 wpxdev:text-xs wpxdev:shadow-xl",
+        "grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl",
         className
       )}
     >
       {!nestLabel ? tooltipLabel : null}
-      <div className="wpxdev:grid wpxdev:gap-1.5">
+      <div className="grid gap-1.5">
         {payload
           .filter((item) => item.type !== "none")
           .map((item, index) => {
@@ -208,8 +208,8 @@ function ChartTooltipContent({
               <div
                 key={index}
                 className={cn(
-                  "wpxdev:flex wpxdev:w-full wpxdev:flex-wrap wpxdev:items-stretch wpxdev:gap-2 wpxdev:[&>svg]:h-2.5 wpxdev:[&>svg]:w-2.5 wpxdev:[&>svg]:text-muted-foreground",
-                  indicator === "dot" && "wpxdev:items-center"
+                  "flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5 [&>svg]:text-muted-foreground",
+                  indicator === "dot" && "items-center"
                 )}
               >
                 {formatter && item?.value !== undefined && item.name ? (
@@ -222,7 +222,7 @@ function ChartTooltipContent({
                       !hideIndicator && (
                         <div
                           className={cn(
-                            "wpxdev:shrink-0 wpxdev:rounded-[2px] wpxdev:border-(--wpxdev-chart-color-border) wpxdev:bg-(--wpxdev-chart-color-bg)",
+                            "shrink-0 rounded-[2px] border-(--wpxdev-chart-color-border) bg-(--wpxdev-chart-color-bg)",
                             {
                               "h-2.5 w-2.5": indicator === "dot",
                               "w-1": indicator === "line",
@@ -242,18 +242,18 @@ function ChartTooltipContent({
                     )}
                     <div
                       className={cn(
-                        "wpxdev:flex wpxdev:flex-1 wpxdev:justify-between wpxdev:leading-none",
-                        nestLabel ? "wpxdev:items-end" : "wpxdev:items-center"
+                        "flex flex-1 justify-between leading-none",
+                        nestLabel ? "items-end" : "items-center"
                       )}
                     >
-                      <div className="wpxdev:grid wpxdev:gap-1.5">
+                      <div className="grid gap-1.5">
                         {nestLabel ? tooltipLabel : null}
-                        <span className="wpxdev:text-muted-foreground">
+                        <span className="text-muted-foreground">
                           {itemConfig?.label ?? item.name}
                         </span>
                       </div>
                       {item.value != null && (
-                        <span className="wpxdev:font-mono wpxdev:font-medium wpxdev:text-foreground wpxdev:tabular-nums">
+                        <span className="font-mono font-medium text-foreground tabular-nums">
                           {typeof item.value === "number"
                             ? item.value.toLocaleString()
                             : String(item.value)}
@@ -291,8 +291,8 @@ function ChartLegendContent({
   return (
     <div
       className={cn(
-        "wpxdev:flex wpxdev:items-center wpxdev:justify-center wpxdev:gap-4",
-        verticalAlign === "top" ? "wpxdev:pb-3" : "wpxdev:pt-3",
+        "flex items-center justify-center gap-4",
+        verticalAlign === "top" ? "pb-3" : "pt-3",
         className
       )}
     >
@@ -306,14 +306,14 @@ function ChartLegendContent({
             <div
               key={index}
               className={cn(
-                "wpxdev:flex wpxdev:items-center wpxdev:gap-1.5 wpxdev:[&>svg]:h-3 wpxdev:[&>svg]:w-3 wpxdev:[&>svg]:text-muted-foreground"
+                "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground"
               )}
             >
               {itemConfig?.icon && !hideIcon ? (
                 <itemConfig.icon />
               ) : (
                 <div
-                  className="wpxdev:h-2 wpxdev:w-2 wpxdev:shrink-0 wpxdev:rounded-[2px]"
+                  className="h-2 w-2 shrink-0 rounded-[2px]"
                   style={{
                     backgroundColor: item.color,
                   }}

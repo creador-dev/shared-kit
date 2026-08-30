@@ -1,53 +1,50 @@
 @layer theme, components, utilities;
 
-@import "tailwindcss/theme.css" layer(theme) prefix(wpxdev);
-@import "tailwindcss/utilities.css" layer(utilities) prefix(wpxdev);
-@import "tw-animate-css" prefix(wpxdev);
-@import "shadcn/tailwind.css" prefix(wpxdev);
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @source "./**/*.{ts,tsx}";
 
 @custom-variant dark (&:where(.wpxdev-dark, .wpxdev-dark *));
 
-@theme {
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-popover: oklch(1 0 0);
-  --color-popover-foreground: oklch(0.145 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-accent: oklch(0.97 0 0);
-  --color-accent-foreground: oklch(0.205 0 0);
-  --color-destructive: oklch(0.577 0.245 27.325);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-ring: oklch(0.708 0 0);
-  --color-sidebar: hsl(0 0% 98%);
-  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
-  --color-sidebar-primary: hsl(240 5.9% 10%);
-  --color-sidebar-primary-foreground: hsl(0 0% 98%);
-  --color-sidebar-accent: hsl(240 4.8% 95.9%);
-  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --color-sidebar-border: hsl(220 13% 91%);
-  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
-
-  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, monospace;
-
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-
-  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.05);
-  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.12);
+:root {
+  --wpxdev-color-background: oklch(1 0 0);
+  --wpxdev-color-foreground: oklch(0.145 0 0);
+  --wpxdev-color-card: oklch(1 0 0);
+  --wpxdev-color-card-foreground: oklch(0.145 0 0);
+  --wpxdev-color-popover: oklch(1 0 0);
+  --wpxdev-color-popover-foreground: oklch(0.145 0 0);
+  --wpxdev-color-primary: oklch(0.205 0 0);
+  --wpxdev-color-primary-foreground: oklch(0.985 0 0);
+  --wpxdev-color-secondary: oklch(0.97 0 0);
+  --wpxdev-color-secondary-foreground: oklch(0.205 0 0);
+  --wpxdev-color-muted: oklch(0.97 0 0);
+  --wpxdev-color-muted-foreground: oklch(0.556 0 0);
+  --wpxdev-color-accent: oklch(0.97 0 0);
+  --wpxdev-color-accent-foreground: oklch(0.205 0 0);
+  --wpxdev-color-destructive: oklch(0.577 0.245 27.325);
+  --wpxdev-color-border: oklch(0.922 0 0);
+  --wpxdev-color-input: oklch(0.922 0 0);
+  --wpxdev-color-ring: oklch(0.708 0 0);
+  --wpxdev-color-sidebar: hsl(0 0% 98%);
+  --wpxdev-color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --wpxdev-color-sidebar-primary: hsl(240 5.9% 10%);
+  --wpxdev-color-sidebar-primary-foreground: hsl(0 0% 98%);
+  --wpxdev-color-sidebar-accent: hsl(240 4.8% 95.9%);
+  --wpxdev-color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --wpxdev-color-sidebar-border: hsl(220 13% 91%);
+  --wpxdev-color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --wpxdev-font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --wpxdev-font-mono: "SFMono-Regular", Consolas, monospace;
+  --wpxdev-radius-sm: 0.25rem;
+  --wpxdev-radius-md: 0.5rem;
+  --wpxdev-radius-lg: 0.75rem;
+  --wpxdev-radius-xl: 1rem;
+  --wpxdev-shadow-xs: 0 1px 2px rgb(0 0 0 / 0.05);
+  --wpxdev-shadow-sm: 0 1px 3px rgb(0 0 0 / 0.1);
+  --wpxdev-shadow-md: 0 4px 12px rgb(0 0 0 / 0.12);
 }
 
 .wpxdev-dark {
@@ -69,9 +66,6 @@
   --wpxdev-color-border: oklch(1 0 0 / 10%);
   --wpxdev-color-input: oklch(1 0 0 / 15%);
   --wpxdev-color-ring: oklch(0.556 0 0);
-}
-
-.wpxdev-dark {
   --wpxdev-color-sidebar: hsl(240 5.9% 10%);
   --wpxdev-color-sidebar-foreground: hsl(240 4.8% 95.9%);
   --wpxdev-color-sidebar-primary: hsl(224.3 76.3% 48%);
@@ -80,4 +74,42 @@
   --wpxdev-color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
   --wpxdev-color-sidebar-border: hsl(240 3.7% 15.9%);
   --wpxdev-color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+@theme inline {
+  --color-background: var(--wpxdev-color-background);
+  --color-foreground: var(--wpxdev-color-foreground);
+  --color-card: var(--wpxdev-color-card);
+  --color-card-foreground: var(--wpxdev-color-card-foreground);
+  --color-popover: var(--wpxdev-color-popover);
+  --color-popover-foreground: var(--wpxdev-color-popover-foreground);
+  --color-primary: var(--wpxdev-color-primary);
+  --color-primary-foreground: var(--wpxdev-color-primary-foreground);
+  --color-secondary: var(--wpxdev-color-secondary);
+  --color-secondary-foreground: var(--wpxdev-color-secondary-foreground);
+  --color-muted: var(--wpxdev-color-muted);
+  --color-muted-foreground: var(--wpxdev-color-muted-foreground);
+  --color-accent: var(--wpxdev-color-accent);
+  --color-accent-foreground: var(--wpxdev-color-accent-foreground);
+  --color-destructive: var(--wpxdev-color-destructive);
+  --color-border: var(--wpxdev-color-border);
+  --color-input: var(--wpxdev-color-input);
+  --color-ring: var(--wpxdev-color-ring);
+  --color-sidebar: var(--wpxdev-color-sidebar);
+  --color-sidebar-foreground: var(--wpxdev-color-sidebar-foreground);
+  --color-sidebar-primary: var(--wpxdev-color-sidebar-primary);
+  --color-sidebar-primary-foreground: var(--wpxdev-color-sidebar-primary-foreground);
+  --color-sidebar-accent: var(--wpxdev-color-sidebar-accent);
+  --color-sidebar-accent-foreground: var(--wpxdev-color-sidebar-accent-foreground);
+  --color-sidebar-border: var(--wpxdev-color-sidebar-border);
+  --color-sidebar-ring: var(--wpxdev-color-sidebar-ring);
+  --font-sans: var(--wpxdev-font-sans);
+  --font-mono: var(--wpxdev-font-mono);
+  --radius-sm: var(--wpxdev-radius-sm);
+  --radius-md: var(--wpxdev-radius-md);
+  --radius-lg: var(--wpxdev-radius-lg);
+  --radius-xl: var(--wpxdev-radius-xl);
+  --shadow-xs: var(--wpxdev-shadow-xs);
+  --shadow-sm: var(--wpxdev-shadow-sm);
+  --shadow-md: var(--wpxdev-shadow-md);
 }

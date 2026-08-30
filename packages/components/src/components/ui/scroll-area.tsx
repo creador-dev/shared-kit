@@ -13,12 +13,12 @@ function ScrollArea({
   return (
     <ScrollAreaPrimitive.Root
       data-slot="scroll-area"
-      className={cn("wpxdev:relative", className)}
+      className={cn("relative", className)}
       {...props}
     >
       <ScrollAreaPrimitive.Viewport
         data-slot="scroll-area-viewport"
-        className="wpxdev:size-full wpxdev:rounded-[inherit] wpxdev:transition-[color,box-shadow] wpxdev:outline-none wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50 wpxdev:focus-visible:outline-1"
+        className="size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1"
       >
         {children}
       </ScrollAreaPrimitive.Viewport>
@@ -38,18 +38,18 @@ function ScrollBar({
       data-slot="scroll-area-scrollbar"
       orientation={orientation}
       className={cn(
-        "wpxdev:flex wpxdev:touch-none wpxdev:p-px wpxdev:transition-colors wpxdev:select-none",
+        "flex touch-none p-px transition-colors select-none",
         orientation === "vertical" &&
-          "wpxdev:h-full wpxdev:w-2.5 wpxdev:border-l wpxdev:border-l-transparent",
+          "h-full w-2.5 border-l border-l-transparent",
         orientation === "horizontal" &&
-          "wpxdev:h-2.5 wpxdev:flex-col wpxdev:border-t wpxdev:border-t-transparent",
+          "h-2.5 flex-col border-t border-t-transparent",
         className
       )}
       {...props}
     >
       <ScrollAreaPrimitive.ScrollAreaThumb
         data-slot="scroll-area-thumb"
-        className="wpxdev:relative wpxdev:flex-1 wpxdev:rounded-full wpxdev:bg-border"
+        className="relative flex-1 rounded-full bg-border"
       />
     </ScrollAreaPrimitive.ScrollAreaScrollbar>
   )

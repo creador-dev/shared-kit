@@ -4,13 +4,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "#lib/utils"
 
 const alertVariants = cva(
-  "wpxdev:relative wpxdev:grid wpxdev:w-full wpxdev:grid-cols-[0_1fr] wpxdev:items-start wpxdev:gap-y-0.5 wpxdev:rounded-lg wpxdev:border wpxdev:px-4 wpxdev:py-3 wpxdev:text-sm wpxdev:has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] wpxdev:has-[>svg]:gap-x-3 wpxdev:[&>svg]:size-4 wpxdev:[&>svg]:translate-y-0.5 wpxdev:[&>svg]:text-current",
+  "relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-lg border px-4 py-3 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   {
     variants: {
       variant: {
-        default: "wpxdev:bg-card wpxdev:text-card-foreground",
+        default: "bg-card text-card-foreground",
         destructive:
-          "wpxdev:bg-card wpxdev:text-destructive wpxdev:*:data-[slot=alert-description]:text-destructive/90 wpxdev:[&>svg]:text-current",
+          "bg-card text-destructive *:data-[slot=alert-description]:text-destructive/90 [&>svg]:text-current",
       },
     },
     defaultVariants: {
@@ -39,7 +39,7 @@ function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="alert-title"
       className={cn(
-        "wpxdev:col-start-2 wpxdev:line-clamp-1 wpxdev:min-h-4 wpxdev:font-medium wpxdev:tracking-tight",
+        "col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight",
         className
       )}
       {...props}
@@ -55,7 +55,7 @@ function AlertDescription({
     <div
       data-slot="alert-description"
       className={cn(
-        "wpxdev:col-start-2 wpxdev:grid wpxdev:justify-items-start wpxdev:gap-1 wpxdev:text-sm wpxdev:text-muted-foreground wpxdev:[&_p]:leading-relaxed",
+        "col-start-2 grid justify-items-start gap-1 text-sm text-muted-foreground [&_p]:leading-relaxed",
         className
       )}
       {...props}

@@ -120,7 +120,7 @@ function Carousel({
     >
       <div
         onKeyDownCapture={handleKeyDown}
-        className={cn("wpxdev:relative", className)}
+        className={cn("relative", className)}
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
@@ -138,13 +138,13 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       ref={carouselRef}
-      className="wpxdev:overflow-hidden"
+      className="overflow-hidden"
       data-slot="carousel-content"
     >
       <div
         className={cn(
-          "wpxdev:flex",
-          orientation === "horizontal" ? "wpxdev:-ml-4" : "wpxdev:-mt-4 wpxdev:flex-col",
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
         {...props}
@@ -162,8 +162,8 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "wpxdev:min-w-0 wpxdev:shrink-0 wpxdev:grow-0 wpxdev:basis-full",
-        orientation === "horizontal" ? "wpxdev:pl-4" : "wpxdev:pt-4",
+        "min-w-0 shrink-0 grow-0 basis-full",
+        orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
       {...props}
@@ -185,10 +185,10 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "wpxdev:absolute wpxdev:size-8 wpxdev:rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
-          ? "wpxdev:top-1/2 wpxdev:-left-12 wpxdev:-translate-y-1/2"
-          : "wpxdev:-top-12 wpxdev:left-1/2 wpxdev:-translate-x-1/2 wpxdev:rotate-90",
+          ? "top-1/2 -left-12 -translate-y-1/2"
+          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
@@ -196,7 +196,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="wpxdev:sr-only">Previous slide</span>
+      <span className="sr-only">Previous slide</span>
     </Button>
   )
 }
@@ -215,10 +215,10 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "wpxdev:absolute wpxdev:size-8 wpxdev:rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
-          ? "wpxdev:top-1/2 wpxdev:-right-12 wpxdev:-translate-y-1/2"
-          : "wpxdev:-bottom-12 wpxdev:left-1/2 wpxdev:-translate-x-1/2 wpxdev:rotate-90",
+          ? "top-1/2 -right-12 -translate-y-1/2"
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
@@ -226,7 +226,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="wpxdev:sr-only">Next slide</span>
+      <span className="sr-only">Next slide</span>
     </Button>
   )
 }

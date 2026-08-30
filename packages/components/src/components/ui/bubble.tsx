@@ -8,31 +8,31 @@ function BubbleGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="bubble-group"
-      className={cn("wpxdev:flex wpxdev:min-w-0 wpxdev:flex-col wpxdev:gap-2", className)}
+      className={cn("flex min-w-0 flex-col gap-2", className)}
       {...props}
     />
   )
 }
 
 const bubbleVariants = cva(
-  "wpxdev:group/bubble wpxdev:relative wpxdev:flex wpxdev:w-fit wpxdev:max-w-[80%] wpxdev:min-w-0 wpxdev:flex-col wpxdev:gap-1 wpxdev:group-data-[align=end]/message:self-end wpxdev:data-[align=end]:self-end wpxdev:data-[variant=ghost]:max-w-full",
+  "group/bubble relative flex w-fit max-w-[80%] min-w-0 flex-col gap-1 group-data-[align=end]/message:self-end data-[align=end]:self-end data-[variant=ghost]:max-w-full",
   {
     variants: {
       variant: {
         default:
-          "wpxdev:*:data-[slot=bubble-content]:bg-primary wpxdev:*:data-[slot=bubble-content]:text-primary-foreground wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-primary/80",
+          "*:data-[slot=bubble-content]:bg-primary *:data-[slot=bubble-content]:text-primary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-primary/80",
         secondary:
-          "wpxdev:*:data-[slot=bubble-content]:bg-secondary wpxdev:*:data-[slot=bubble-content]:text-secondary-foreground wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--wpxdev-color-secondary),var(--wpxdev-color-foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-secondary *:data-[slot=bubble-content]:text-secondary-foreground [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--wpxdev-color-secondary),var(--wpxdev-color-foreground)_5%)]",
         muted:
-          "wpxdev:*:data-[slot=bubble-content]:bg-muted wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--wpxdev-color-muted),var(--wpxdev-color-foreground)_5%)]",
+          "*:data-[slot=bubble-content]:bg-muted [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[color-mix(in_oklch,var(--wpxdev-color-muted),var(--wpxdev-color-foreground)_5%)]",
         tinted:
-          "wpxdev:*:data-[slot=bubble-content]:bg-[oklch(from_var(--wpxdev-color-primary)_0.93_calc(c*0.4)_h)] wpxdev:*:data-[slot=bubble-content]:text-foreground wpxdev:dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--wpxdev-color-primary)_0.3_calc(c*0.4)_h)] wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--wpxdev-color-primary)_0.88_calc(c*0.5)_h)] wpxdev:dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--wpxdev-color-primary)_0.35_calc(c*0.5)_h)]",
+          "*:data-[slot=bubble-content]:bg-[oklch(from_var(--wpxdev-color-primary)_0.93_calc(c*0.4)_h)] *:data-[slot=bubble-content]:text-foreground dark:*:data-[slot=bubble-content]:bg-[oklch(from_var(--wpxdev-color-primary)_0.3_calc(c*0.4)_h)] [&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--wpxdev-color-primary)_0.88_calc(c*0.5)_h)] dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-[oklch(from_var(--wpxdev-color-primary)_0.35_calc(c*0.5)_h)]",
         outline:
-          "wpxdev:*:data-[slot=bubble-content]:border-border wpxdev:*:data-[slot=bubble-content]:bg-background wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-muted wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:text-foreground wpxdev:dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-input/30",
+          "*:data-[slot=bubble-content]:border-border *:data-[slot=bubble-content]:bg-background [&>[data-slot=bubble-content]:is(button,a):hover]:bg-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-input/30",
         ghost:
-          "wpxdev:border-none wpxdev:*:data-[slot=bubble-content]:rounded-none wpxdev:*:data-[slot=bubble-content]:bg-transparent wpxdev:*:data-[slot=bubble-content]:p-0 wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-muted wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:text-foreground wpxdev:dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-muted/50",
+          "border-none *:data-[slot=bubble-content]:rounded-none *:data-[slot=bubble-content]:bg-transparent *:data-[slot=bubble-content]:p-0 [&>[data-slot=bubble-content]:is(button,a):hover]:bg-muted [&>[data-slot=bubble-content]:is(button,a):hover]:text-foreground dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-muted/50",
         destructive:
-          "wpxdev:*:data-[slot=bubble-content]:bg-destructive/10 wpxdev:*:data-[slot=bubble-content]:text-destructive wpxdev:dark:*:data-[slot=bubble-content]:bg-destructive/20 wpxdev:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-destructive/20 wpxdev:dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-destructive/30",
+          "*:data-[slot=bubble-content]:bg-destructive/10 *:data-[slot=bubble-content]:text-destructive dark:*:data-[slot=bubble-content]:bg-destructive/20 [&>[data-slot=bubble-content]:is(button,a):hover]:bg-destructive/20 dark:[&>[data-slot=bubble-content]:is(button,a):hover]:bg-destructive/30",
       },
     },
     defaultVariants: {
@@ -74,7 +74,7 @@ function BubbleContent({
     <Comp
       data-slot="bubble-content"
       className={cn(
-        "wpxdev:w-fit wpxdev:max-w-full wpxdev:min-w-0 wpxdev:overflow-hidden wpxdev:rounded-xl wpxdev:border wpxdev:border-transparent wpxdev:px-3 wpxdev:py-2 wpxdev:text-sm wpxdev:leading-relaxed wpxdev:wrap-break-word wpxdev:group-data-[align=end]/bubble:self-end wpxdev:[button]:text-left wpxdev:[button,a]:transition-colors wpxdev:[button,a]:outline-none wpxdev:[button,a]:focus-visible:border-ring wpxdev:[button,a]:focus-visible:ring-3 wpxdev:[button,a]:focus-visible:ring-ring/50",
+        "w-fit max-w-full min-w-0 overflow-hidden rounded-xl border border-transparent px-3 py-2 text-sm leading-relaxed wrap-break-word group-data-[align=end]/bubble:self-end [button]:text-left [button,a]:transition-colors [button,a]:outline-none [button,a]:focus-visible:border-ring [button,a]:focus-visible:ring-3 [button,a]:focus-visible:ring-ring/50",
         className
       )}
       {...props}
@@ -83,16 +83,16 @@ function BubbleContent({
 }
 
 const bubbleReactionsVariants = cva(
-  "wpxdev:absolute wpxdev:z-10 wpxdev:flex wpxdev:w-fit wpxdev:shrink-0 wpxdev:items-center wpxdev:justify-center wpxdev:gap-1 wpxdev:rounded-full wpxdev:bg-muted wpxdev:px-1.5 wpxdev:py-0.5 wpxdev:text-sm wpxdev:ring-3 wpxdev:ring-card wpxdev:has-[button]:p-0",
+  "absolute z-10 flex w-fit shrink-0 items-center justify-center gap-1 rounded-full bg-muted px-1.5 py-0.5 text-sm ring-3 ring-card has-[button]:p-0",
   {
     variants: {
       side: {
-        top: "wpxdev:top-0 wpxdev:-translate-y-3/4",
-        bottom: "wpxdev:bottom-0 wpxdev:translate-y-3/4",
+        top: "top-0 -translate-y-3/4",
+        bottom: "bottom-0 translate-y-3/4",
       },
       align: {
-        start: "wpxdev:left-3",
-        end: "wpxdev:right-3",
+        start: "left-3",
+        end: "right-3",
       },
     },
     defaultVariants: {

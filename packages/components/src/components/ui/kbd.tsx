@@ -5,9 +5,9 @@ function Kbd({ className, ...props }: React.ComponentProps<"kbd">) {
     <kbd
       data-slot="kbd"
       className={cn(
-        "wpxdev:pointer-events-none wpxdev:inline-flex wpxdev:h-5 wpxdev:w-fit wpxdev:min-w-5 wpxdev:items-center wpxdev:justify-center wpxdev:gap-1 wpxdev:rounded-sm wpxdev:bg-muted wpxdev:px-1 wpxdev:font-sans wpxdev:text-xs wpxdev:font-medium wpxdev:text-muted-foreground wpxdev:select-none",
-        "wpxdev:[&_svg:not([class*=size-])]:size-3",
-        "wpxdev:[[data-slot=tooltip-content]_&]:bg-background/20 wpxdev:[[data-slot=tooltip-content]_&]:text-background wpxdev:dark:[[data-slot=tooltip-content]_&]:bg-background/10",
+        "pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 rounded-sm bg-muted px-1 font-sans text-xs font-medium text-muted-foreground select-none",
+        "[&_svg:not([class*=size-])]:size-3",
+        "[[data-slot=tooltip-content]_&]:bg-background/20 [[data-slot=tooltip-content]_&]:text-background dark:[[data-slot=tooltip-content]_&]:bg-background/10",
         className
       )}
       {...props}
@@ -19,7 +19,7 @@ function KbdGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <kbd
       data-slot="kbd-group"
-      className={cn("wpxdev:inline-flex wpxdev:items-center wpxdev:gap-1", className)}
+      className={cn("inline-flex items-center gap-1", className)}
       {...props}
     />
   )

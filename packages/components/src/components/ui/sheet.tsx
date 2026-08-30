@@ -34,7 +34,7 @@ function SheetOverlay({
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
       className={cn(
-        "wpxdev:fixed wpxdev:inset-0 wpxdev:z-50 wpxdev:bg-black/50 wpxdev:data-[state=closed]:animate-out wpxdev:data-[state=closed]:fade-out-0 wpxdev:data-[state=open]:animate-in wpxdev:data-[state=open]:fade-in-0",
+        "fixed inset-0 z-50 bg-black/50 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0",
         className
       )}
       {...props}
@@ -58,24 +58,24 @@ function SheetContent({
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          "wpxdev:fixed wpxdev:z-50 wpxdev:flex wpxdev:flex-col wpxdev:gap-4 wpxdev:bg-background wpxdev:shadow-lg wpxdev:transition wpxdev:ease-in-out wpxdev:data-[state=closed]:animate-out wpxdev:data-[state=closed]:duration-300 wpxdev:data-[state=open]:animate-in wpxdev:data-[state=open]:duration-500",
+          "fixed z-50 flex flex-col gap-4 bg-background shadow-lg transition ease-in-out data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:animate-in data-[state=open]:duration-500",
           side === "right" &&
-            "wpxdev:inset-y-0 wpxdev:right-0 wpxdev:h-full wpxdev:w-3/4 wpxdev:border-l wpxdev:data-[state=closed]:slide-out-to-right wpxdev:data-[state=open]:slide-in-from-right wpxdev:sm:max-w-sm",
+            "inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
           side === "left" &&
-            "wpxdev:inset-y-0 wpxdev:left-0 wpxdev:h-full wpxdev:w-3/4 wpxdev:border-r wpxdev:data-[state=closed]:slide-out-to-left wpxdev:data-[state=open]:slide-in-from-left wpxdev:sm:max-w-sm",
+            "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
           side === "top" &&
-            "wpxdev:inset-x-0 wpxdev:top-0 wpxdev:h-auto wpxdev:border-b wpxdev:data-[state=closed]:slide-out-to-top wpxdev:data-[state=open]:slide-in-from-top",
+            "inset-x-0 top-0 h-auto border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
           side === "bottom" &&
-            "wpxdev:inset-x-0 wpxdev:bottom-0 wpxdev:h-auto wpxdev:border-t wpxdev:data-[state=closed]:slide-out-to-bottom wpxdev:data-[state=open]:slide-in-from-bottom",
+            "inset-x-0 bottom-0 h-auto border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
           className
         )}
         {...props}
       >
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close className="wpxdev:absolute wpxdev:top-4 wpxdev:right-4 wpxdev:rounded-xs wpxdev:opacity-70 wpxdev:ring-offset-background wpxdev:transition-opacity wpxdev:hover:opacity-100 wpxdev:focus:ring-2 wpxdev:focus:ring-ring wpxdev:focus:ring-offset-2 wpxdev:focus:outline-hidden wpxdev:disabled:pointer-events-none wpxdev:data-[state=open]:bg-secondary">
-            <XIcon className="wpxdev:size-4" />
-            <span className="wpxdev:sr-only">Close</span>
+          <SheetPrimitive.Close className="absolute top-4 right-4 rounded-xs opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none data-[state=open]:bg-secondary">
+            <XIcon className="size-4" />
+            <span className="sr-only">Close</span>
           </SheetPrimitive.Close>
         )}
       </SheetPrimitive.Content>
@@ -87,7 +87,7 @@ function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-header"
-      className={cn("wpxdev:flex wpxdev:flex-col wpxdev:gap-1.5 wpxdev:p-4", className)}
+      className={cn("flex flex-col gap-1.5 p-4", className)}
       {...props}
     />
   )
@@ -97,7 +97,7 @@ function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-footer"
-      className={cn("wpxdev:mt-auto wpxdev:flex wpxdev:flex-col wpxdev:gap-2 wpxdev:p-4", className)}
+      className={cn("mt-auto flex flex-col gap-2 p-4", className)}
       {...props}
     />
   )
@@ -110,7 +110,7 @@ function SheetTitle({
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
-      className={cn("wpxdev:font-semibold wpxdev:text-foreground", className)}
+      className={cn("font-semibold text-foreground", className)}
       {...props}
     />
   )
@@ -123,7 +123,7 @@ function SheetDescription({
   return (
     <SheetPrimitive.Description
       data-slot="sheet-description"
-      className={cn("wpxdev:text-sm wpxdev:text-muted-foreground", className)}
+      className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
   )

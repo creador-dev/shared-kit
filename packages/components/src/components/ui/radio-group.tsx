@@ -13,7 +13,7 @@ function RadioGroup({
   return (
     <RadioGroupPrimitive.Root
       data-slot="radio-group"
-      className={cn("wpxdev:grid wpxdev:gap-3", className)}
+      className={cn("grid gap-3", className)}
       {...props}
     />
   )
@@ -27,16 +27,16 @@ function RadioGroupItem({
     <RadioGroupPrimitive.Item
       data-slot="radio-group-item"
       className={cn(
-        "wpxdev:aspect-square wpxdev:size-4 wpxdev:shrink-0 wpxdev:rounded-full wpxdev:border wpxdev:border-input wpxdev:text-primary wpxdev:shadow-xs wpxdev:transition-[color,box-shadow] wpxdev:outline-none wpxdev:focus-visible:border-ring wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50 wpxdev:disabled:cursor-not-allowed wpxdev:disabled:opacity-50 wpxdev:aria-invalid:border-destructive wpxdev:aria-invalid:ring-destructive/20 wpxdev:dark:bg-input/30 wpxdev:dark:aria-invalid:ring-destructive/40",
+        "aspect-square size-4 shrink-0 rounded-full border border-input text-primary shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:bg-input/30 dark:aria-invalid:ring-destructive/40",
         className
       )}
       {...props}
     >
       <RadioGroupPrimitive.Indicator
         data-slot="radio-group-indicator"
-        className="wpxdev:relative wpxdev:flex wpxdev:items-center wpxdev:justify-center"
+        className="relative flex items-center justify-center"
       >
-        <CircleIcon className="wpxdev:absolute wpxdev:top-1/2 wpxdev:left-1/2 wpxdev:size-2 wpxdev:-translate-x-1/2 wpxdev:-translate-y-1/2 wpxdev:fill-primary" />
+        <CircleIcon className="absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2 fill-primary" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )

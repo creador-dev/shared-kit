@@ -12,7 +12,7 @@ function Menubar({
     <MenubarPrimitive.Root
       data-slot="menubar"
       className={cn(
-        "wpxdev:flex wpxdev:h-9 wpxdev:items-center wpxdev:gap-1 wpxdev:rounded-md wpxdev:border wpxdev:bg-background wpxdev:p-1 wpxdev:shadow-xs",
+        "flex h-9 items-center gap-1 rounded-md border bg-background p-1 shadow-xs",
         className
       )}
       {...props}
@@ -54,7 +54,7 @@ function MenubarTrigger({
     <MenubarPrimitive.Trigger
       data-slot="menubar-trigger"
       className={cn(
-        "wpxdev:flex wpxdev:items-center wpxdev:rounded-sm wpxdev:px-2 wpxdev:py-1 wpxdev:text-sm wpxdev:font-medium wpxdev:outline-hidden wpxdev:select-none wpxdev:focus:bg-accent wpxdev:focus:text-accent-foreground wpxdev:data-[state=open]:bg-accent wpxdev:data-[state=open]:text-accent-foreground",
+        "flex items-center rounded-sm px-2 py-1 text-sm font-medium outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
         className
       )}
       {...props}
@@ -77,7 +77,7 @@ function MenubarContent({
         alignOffset={alignOffset}
         sideOffset={sideOffset}
         className={cn(
-          "wpxdev:z-50 wpxdev:min-w-[12rem] wpxdev:origin-(--radix-menubar-content-transform-origin) wpxdev:overflow-hidden wpxdev:rounded-md wpxdev:border wpxdev:bg-popover wpxdev:p-1 wpxdev:text-popover-foreground wpxdev:shadow-md wpxdev:data-[side=bottom]:slide-in-from-top-2 wpxdev:data-[side=left]:slide-in-from-right-2 wpxdev:data-[side=right]:slide-in-from-left-2 wpxdev:data-[side=top]:slide-in-from-bottom-2 wpxdev:data-[state=closed]:fade-out-0 wpxdev:data-[state=closed]:zoom-out-95 wpxdev:data-[state=open]:animate-in wpxdev:data-[state=open]:fade-in-0 wpxdev:data-[state=open]:zoom-in-95",
+          "z-50 min-w-[12rem] origin-(--radix-menubar-content-transform-origin) overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
           className
         )}
         {...props}
@@ -101,7 +101,7 @@ function MenubarItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "wpxdev:relative wpxdev:flex wpxdev:cursor-default wpxdev:items-center wpxdev:gap-2 wpxdev:rounded-sm wpxdev:px-2 wpxdev:py-1.5 wpxdev:text-sm wpxdev:outline-hidden wpxdev:select-none wpxdev:focus:bg-accent wpxdev:focus:text-accent-foreground wpxdev:data-[disabled]:pointer-events-none wpxdev:data-[disabled]:opacity-50 wpxdev:data-[inset]:pl-8 wpxdev:data-[variant=destructive]:text-destructive wpxdev:data-[variant=destructive]:focus:bg-destructive/10 wpxdev:data-[variant=destructive]:focus:text-destructive wpxdev:dark:data-[variant=destructive]:focus:bg-destructive/20 wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg]:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4 wpxdev:[&_svg:not([class*=text-])]:text-muted-foreground wpxdev:data-[variant=destructive]:*:[svg]:text-destructive!",
+        "relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:focus:text-destructive dark:data-[variant=destructive]:focus:bg-destructive/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4 [&_svg:not([class*=text-])]:text-muted-foreground data-[variant=destructive]:*:[svg]:text-destructive!",
         className
       )}
       {...props}
@@ -119,15 +119,15 @@ function MenubarCheckboxItem({
     <MenubarPrimitive.CheckboxItem
       data-slot="menubar-checkbox-item"
       className={cn(
-        "wpxdev:relative wpxdev:flex wpxdev:cursor-default wpxdev:items-center wpxdev:gap-2 wpxdev:rounded-xs wpxdev:py-1.5 wpxdev:pr-2 wpxdev:pl-8 wpxdev:text-sm wpxdev:outline-hidden wpxdev:select-none wpxdev:focus:bg-accent wpxdev:focus:text-accent-foreground wpxdev:data-[disabled]:pointer-events-none wpxdev:data-[disabled]:opacity-50 wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg]:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4",
+        "relative flex cursor-default items-center gap-2 rounded-xs py-1.5 pr-2 pl-8 text-sm outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...(checked === undefined ? {} : { checked })}
       {...props}
     >
-      <span className="wpxdev:pointer-events-none wpxdev:absolute wpxdev:left-2 wpxdev:flex wpxdev:size-3.5 wpxdev:items-center wpxdev:justify-center">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <CheckIcon className="wpxdev:size-4" />
+          <CheckIcon className="size-4" />
         </MenubarPrimitive.ItemIndicator>
       </span>
       {children}
@@ -144,14 +144,14 @@ function MenubarRadioItem({
     <MenubarPrimitive.RadioItem
       data-slot="menubar-radio-item"
       className={cn(
-        "wpxdev:relative wpxdev:flex wpxdev:cursor-default wpxdev:items-center wpxdev:gap-2 wpxdev:rounded-xs wpxdev:py-1.5 wpxdev:pr-2 wpxdev:pl-8 wpxdev:text-sm wpxdev:outline-hidden wpxdev:select-none wpxdev:focus:bg-accent wpxdev:focus:text-accent-foreground wpxdev:data-[disabled]:pointer-events-none wpxdev:data-[disabled]:opacity-50 wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg]:shrink-0 wpxdev:[&_svg:not([class*=size-])]:size-4",
+        "relative flex cursor-default items-center gap-2 rounded-xs py-1.5 pr-2 pl-8 text-sm outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
     >
-      <span className="wpxdev:pointer-events-none wpxdev:absolute wpxdev:left-2 wpxdev:flex wpxdev:size-3.5 wpxdev:items-center wpxdev:justify-center">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <CircleIcon className="wpxdev:size-2 wpxdev:fill-current" />
+          <CircleIcon className="size-2 fill-current" />
         </MenubarPrimitive.ItemIndicator>
       </span>
       {children}
@@ -171,7 +171,7 @@ function MenubarLabel({
       data-slot="menubar-label"
       data-inset={inset}
       className={cn(
-        "wpxdev:px-2 wpxdev:py-1.5 wpxdev:text-sm wpxdev:font-medium wpxdev:data-[inset]:pl-8",
+        "px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
         className
       )}
       {...props}
@@ -186,7 +186,7 @@ function MenubarSeparator({
   return (
     <MenubarPrimitive.Separator
       data-slot="menubar-separator"
-      className={cn("wpxdev:-mx-1 wpxdev:my-1 wpxdev:h-px wpxdev:bg-border", className)}
+      className={cn("-mx-1 my-1 h-px bg-border", className)}
       {...props}
     />
   )
@@ -200,7 +200,7 @@ function MenubarShortcut({
     <span
       data-slot="menubar-shortcut"
       className={cn(
-        "wpxdev:ml-auto wpxdev:text-xs wpxdev:tracking-widest wpxdev:text-muted-foreground",
+        "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}
       {...props}
@@ -227,13 +227,13 @@ function MenubarSubTrigger({
       data-slot="menubar-sub-trigger"
       data-inset={inset}
       className={cn(
-        "wpxdev:flex wpxdev:cursor-default wpxdev:items-center wpxdev:rounded-sm wpxdev:px-2 wpxdev:py-1.5 wpxdev:text-sm wpxdev:outline-none wpxdev:select-none wpxdev:focus:bg-accent wpxdev:focus:text-accent-foreground wpxdev:data-[inset]:pl-8 wpxdev:data-[state=open]:bg-accent wpxdev:data-[state=open]:text-accent-foreground",
+        "flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none focus:bg-accent focus:text-accent-foreground data-[inset]:pl-8 data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
         className
       )}
       {...props}
     >
       {children}
-      <ChevronRightIcon className="wpxdev:ml-auto wpxdev:h-4 wpxdev:w-4" />
+      <ChevronRightIcon className="ml-auto h-4 w-4" />
     </MenubarPrimitive.SubTrigger>
   )
 }
@@ -246,7 +246,7 @@ function MenubarSubContent({
     <MenubarPrimitive.SubContent
       data-slot="menubar-sub-content"
       className={cn(
-        "wpxdev:z-50 wpxdev:min-w-[8rem] wpxdev:origin-(--radix-menubar-content-transform-origin) wpxdev:overflow-hidden wpxdev:rounded-md wpxdev:border wpxdev:bg-popover wpxdev:p-1 wpxdev:text-popover-foreground wpxdev:shadow-lg wpxdev:data-[side=bottom]:slide-in-from-top-2 wpxdev:data-[side=left]:slide-in-from-right-2 wpxdev:data-[side=right]:slide-in-from-left-2 wpxdev:data-[side=top]:slide-in-from-bottom-2 wpxdev:data-[state=closed]:animate-out wpxdev:data-[state=closed]:fade-out-0 wpxdev:data-[state=closed]:zoom-out-95 wpxdev:data-[state=open]:animate-in wpxdev:data-[state=open]:fade-in-0 wpxdev:data-[state=open]:zoom-in-95",
+        "z-50 min-w-[8rem] origin-(--radix-menubar-content-transform-origin) overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
         className
       )}
       {...props}

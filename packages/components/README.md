@@ -31,7 +31,7 @@ import { Sidebar, SidebarProvider } from "@creador-dev/components/sidebar";
 
 Registry-owned primitives live in `src/components/ui`. Keep custom wrappers, variants, and product-specific compositions in `src/components/composed` so shadcn updates cannot overwrite them.
 
-Import the compiled stylesheet once at the application or WordPress-plugin entry point. All utilities used internally by the components and all theme variables are prefixed with `wpxdev` (for example, `wpxdev:bg-primary` and `--wpxdev-color-primary`) to avoid collisions with host styles.
+Import the compiled stylesheet once at the application or WordPress-plugin entry point. Components use standard Tailwind classes, while the design tokens owned by this package retain the `wpxdev` namespace (for example, `--wpxdev-color-primary`).
 
 Add future shadcn components from this package directory so the CLI reads `components.json`:
 

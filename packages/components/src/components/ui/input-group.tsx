@@ -14,20 +14,20 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="input-group"
       role="group"
       className={cn(
-        "wpxdev:group/input-group wpxdev:relative wpxdev:flex wpxdev:w-full wpxdev:items-center wpxdev:rounded-md wpxdev:border wpxdev:border-input wpxdev:shadow-xs wpxdev:transition-[color,box-shadow] wpxdev:outline-none wpxdev:dark:bg-input/30",
-        "wpxdev:h-9 wpxdev:min-w-0 wpxdev:has-[>textarea]:h-auto",
+        "group/input-group relative flex w-full items-center rounded-md border border-input shadow-xs transition-[color,box-shadow] outline-none dark:bg-input/30",
+        "h-9 min-w-0 has-[>textarea]:h-auto",
 
         // Variants based on alignment.
-        "wpxdev:has-[>[data-align=inline-start]]:[&>input]:pl-2",
-        "wpxdev:has-[>[data-align=inline-end]]:[&>input]:pr-2",
-        "wpxdev:has-[>[data-align=block-start]]:h-auto wpxdev:has-[>[data-align=block-start]]:flex-col wpxdev:has-[>[data-align=block-start]]:[&>input]:pb-3",
-        "wpxdev:has-[>[data-align=block-end]]:h-auto wpxdev:has-[>[data-align=block-end]]:flex-col wpxdev:has-[>[data-align=block-end]]:[&>input]:pt-3",
+        "has-[>[data-align=inline-start]]:[&>input]:pl-2",
+        "has-[>[data-align=inline-end]]:[&>input]:pr-2",
+        "has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&>input]:pb-3",
+        "has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&>input]:pt-3",
 
         // Focus state.
-        "wpxdev:has-[[data-slot=input-group-control]:focus-visible]:border-ring wpxdev:has-[[data-slot=input-group-control]:focus-visible]:ring-[3px] wpxdev:has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50",
+        "has-[[data-slot=input-group-control]:focus-visible]:border-ring has-[[data-slot=input-group-control]:focus-visible]:ring-[3px] has-[[data-slot=input-group-control]:focus-visible]:ring-ring/50",
 
         // Error state.
-        "wpxdev:has-[[data-slot][aria-invalid=true]]:border-destructive wpxdev:has-[[data-slot][aria-invalid=true]]:ring-destructive/20 wpxdev:dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40",
+        "has-[[data-slot][aria-invalid=true]]:border-destructive has-[[data-slot][aria-invalid=true]]:ring-destructive/20 dark:has-[[data-slot][aria-invalid=true]]:ring-destructive/40",
 
         className
       )}
@@ -37,18 +37,18 @@ function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const inputGroupAddonVariants = cva(
-  "wpxdev:flex wpxdev:h-auto wpxdev:cursor-text wpxdev:items-center wpxdev:justify-center wpxdev:gap-2 wpxdev:py-1.5 wpxdev:text-sm wpxdev:font-medium wpxdev:text-muted-foreground wpxdev:select-none wpxdev:group-data-[disabled=true]/input-group:opacity-50 wpxdev:[&>kbd]:rounded-[calc(var(--wpxdev-radius-md)-5px)] wpxdev:[&>svg:not([class*=size-])]:size-4",
+  "flex h-auto cursor-text items-center justify-center gap-2 py-1.5 text-sm font-medium text-muted-foreground select-none group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--wpxdev-radius-md)-5px)] [&>svg:not([class*=size-])]:size-4",
   {
     variants: {
       align: {
         "inline-start":
-          "wpxdev:order-first wpxdev:pl-3 wpxdev:has-[>button]:ml-[-0.45rem] wpxdev:has-[>kbd]:ml-[-0.35rem]",
+          "order-first pl-3 has-[>button]:ml-[-0.45rem] has-[>kbd]:ml-[-0.35rem]",
         "inline-end":
-          "wpxdev:order-last wpxdev:pr-3 wpxdev:has-[>button]:mr-[-0.45rem] wpxdev:has-[>kbd]:mr-[-0.35rem]",
+          "order-last pr-3 has-[>button]:mr-[-0.45rem] has-[>kbd]:mr-[-0.35rem]",
         "block-start":
-          "wpxdev:order-first wpxdev:w-full wpxdev:justify-start wpxdev:px-3 wpxdev:pt-3 wpxdev:group-has-[>input]/input-group:pt-2.5 wpxdev:[.border-b]:pb-3",
+          "order-first w-full justify-start px-3 pt-3 group-has-[>input]/input-group:pt-2.5 [.border-b]:pb-3",
         "block-end":
-          "wpxdev:order-last wpxdev:w-full wpxdev:justify-start wpxdev:px-3 wpxdev:pb-3 wpxdev:group-has-[>input]/input-group:pb-2.5 wpxdev:[.border-t]:pt-3",
+          "order-last w-full justify-start px-3 pb-3 group-has-[>input]/input-group:pb-2.5 [.border-t]:pt-3",
       },
     },
     defaultVariants: {
@@ -80,15 +80,15 @@ function InputGroupAddon({
 }
 
 const inputGroupButtonVariants = cva(
-  "wpxdev:flex wpxdev:items-center wpxdev:gap-2 wpxdev:text-sm wpxdev:shadow-none",
+  "flex items-center gap-2 text-sm shadow-none",
   {
     variants: {
       size: {
-        xs: "wpxdev:h-6 wpxdev:gap-1 wpxdev:rounded-[calc(var(--wpxdev-radius-md)-5px)] wpxdev:px-2 wpxdev:has-[>svg]:px-2 wpxdev:[&>svg:not([class*=size-])]:size-3.5",
-        sm: "wpxdev:h-8 wpxdev:gap-1.5 wpxdev:rounded-md wpxdev:px-2.5 wpxdev:has-[>svg]:px-2.5",
+        xs: "h-6 gap-1 rounded-[calc(var(--wpxdev-radius-md)-5px)] px-2 has-[>svg]:px-2 [&>svg:not([class*=size-])]:size-3.5",
+        sm: "h-8 gap-1.5 rounded-md px-2.5 has-[>svg]:px-2.5",
         "icon-xs":
-          "wpxdev:size-6 wpxdev:rounded-[calc(var(--wpxdev-radius-md)-5px)] wpxdev:p-0 wpxdev:has-[>svg]:p-0",
-        "icon-sm": "wpxdev:size-8 wpxdev:p-0 wpxdev:has-[>svg]:p-0",
+          "size-6 rounded-[calc(var(--wpxdev-radius-md)-5px)] p-0 has-[>svg]:p-0",
+        "icon-sm": "size-8 p-0 has-[>svg]:p-0",
       },
     },
     defaultVariants: {
@@ -120,7 +120,7 @@ function InputGroupText({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "wpxdev:flex wpxdev:items-center wpxdev:gap-2 wpxdev:text-sm wpxdev:text-muted-foreground wpxdev:[&_svg]:pointer-events-none wpxdev:[&_svg:not([class*=size-])]:size-4",
+        "flex items-center gap-2 text-sm text-muted-foreground [&_svg]:pointer-events-none [&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
@@ -136,7 +136,7 @@ function InputGroupInput({
     <Input
       data-slot="input-group-control"
       className={cn(
-        "wpxdev:flex-1 wpxdev:rounded-none wpxdev:border-0 wpxdev:bg-transparent wpxdev:shadow-none wpxdev:focus-visible:ring-0 wpxdev:dark:bg-transparent",
+        "flex-1 rounded-none border-0 bg-transparent shadow-none focus-visible:ring-0 dark:bg-transparent",
         className
       )}
       {...props}
@@ -152,7 +152,7 @@ function InputGroupTextarea({
     <Textarea
       data-slot="input-group-control"
       className={cn(
-        "wpxdev:flex-1 wpxdev:resize-none wpxdev:rounded-none wpxdev:border-0 wpxdev:bg-transparent wpxdev:py-3 wpxdev:shadow-none wpxdev:focus-visible:ring-0 wpxdev:dark:bg-transparent",
+        "flex-1 resize-none rounded-none border-0 bg-transparent py-3 shadow-none focus-visible:ring-0 dark:bg-transparent",
         className
       )}
       {...props}

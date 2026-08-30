@@ -14,16 +14,16 @@ function Checkbox({
     <CheckboxPrimitive.Root
       data-slot="checkbox"
       className={cn(
-        "wpxdev:peer wpxdev:size-4 wpxdev:shrink-0 wpxdev:rounded-[4px] wpxdev:border wpxdev:border-input wpxdev:shadow-xs wpxdev:transition-shadow wpxdev:outline-none wpxdev:focus-visible:border-ring wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50 wpxdev:disabled:cursor-not-allowed wpxdev:disabled:opacity-50 wpxdev:aria-invalid:border-destructive wpxdev:aria-invalid:ring-destructive/20 wpxdev:data-[state=checked]:border-primary wpxdev:data-[state=checked]:bg-primary wpxdev:data-[state=checked]:text-primary-foreground wpxdev:dark:bg-input/30 wpxdev:dark:aria-invalid:ring-destructive/40 wpxdev:dark:data-[state=checked]:bg-primary",
+        "peer size-4 shrink-0 rounded-[4px] border border-input shadow-xs transition-shadow outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:bg-input/30 dark:aria-invalid:ring-destructive/40 dark:data-[state=checked]:bg-primary",
         className
       )}
       {...props}
     >
       <CheckboxPrimitive.Indicator
         data-slot="checkbox-indicator"
-        className="wpxdev:grid wpxdev:place-content-center wpxdev:text-current wpxdev:transition-none"
+        className="grid place-content-center text-current transition-none"
       >
-        <CheckIcon className="wpxdev:size-3.5" />
+        <CheckIcon className="size-3.5" />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>
   )

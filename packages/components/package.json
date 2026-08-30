@@ -33,7 +33,7 @@
     "#hooks/*": "./src/hooks/*.ts"
   },
   "scripts": {
-    "build": "tsup --config tsup.config.ts && tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify && node ./scripts/prefix-internal-css-variables.mjs",
+    "build": "tsup --config tsup.config.ts && tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit"
   },

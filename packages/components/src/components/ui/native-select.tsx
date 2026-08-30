@@ -10,22 +10,22 @@ function NativeSelect({
 }: Omit<React.ComponentProps<"select">, "size"> & { size?: "sm" | "default" }) {
   return (
     <div
-      className="wpxdev:group/native-select wpxdev:relative wpxdev:w-fit wpxdev:has-[select:disabled]:opacity-50"
+      className="group/native-select relative w-fit has-[select:disabled]:opacity-50"
       data-slot="native-select-wrapper"
     >
       <select
         data-slot="native-select"
         data-size={size}
         className={cn(
-          "wpxdev:h-9 wpxdev:w-full wpxdev:min-w-0 wpxdev:appearance-none wpxdev:rounded-md wpxdev:border wpxdev:border-input wpxdev:bg-transparent wpxdev:px-3 wpxdev:py-2 wpxdev:pr-9 wpxdev:text-sm wpxdev:shadow-xs wpxdev:transition-[color,box-shadow] wpxdev:outline-none wpxdev:selection:bg-primary wpxdev:selection:text-primary-foreground wpxdev:placeholder:text-muted-foreground wpxdev:disabled:pointer-events-none wpxdev:disabled:cursor-not-allowed wpxdev:data-[size=sm]:h-8 wpxdev:data-[size=sm]:py-1 wpxdev:dark:bg-input/30 wpxdev:dark:hover:bg-input/50",
-          "wpxdev:focus-visible:border-ring wpxdev:focus-visible:ring-[3px] wpxdev:focus-visible:ring-ring/50",
-          "wpxdev:aria-invalid:border-destructive wpxdev:aria-invalid:ring-destructive/20 wpxdev:dark:aria-invalid:ring-destructive/40",
+          "h-9 w-full min-w-0 appearance-none rounded-md border border-input bg-transparent px-3 py-2 pr-9 text-sm shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground disabled:pointer-events-none disabled:cursor-not-allowed data-[size=sm]:h-8 data-[size=sm]:py-1 dark:bg-input/30 dark:hover:bg-input/50",
+          "focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50",
+          "aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40",
           className
         )}
         {...props}
       />
       <ChevronDownIcon
-        className="wpxdev:pointer-events-none wpxdev:absolute wpxdev:top-1/2 wpxdev:right-3.5 wpxdev:size-4 wpxdev:-translate-y-1/2 wpxdev:text-muted-foreground wpxdev:opacity-50 wpxdev:select-none"
+        className="pointer-events-none absolute top-1/2 right-3.5 size-4 -translate-y-1/2 text-muted-foreground opacity-50 select-none"
         aria-hidden="true"
         data-slot="native-select-icon"
       />
@@ -40,7 +40,7 @@ function NativeSelectOption({
   return (
     <option
       data-slot="native-select-option"
-      className={cn("wpxdev:bg-[Canvas] wpxdev:text-[CanvasText]", className)}
+      className={cn("bg-[Canvas] text-[CanvasText]", className)}
       {...props}
     />
   )
@@ -53,7 +53,7 @@ function NativeSelectOptGroup({
   return (
     <optgroup
       data-slot="native-select-optgroup"
-      className={cn("wpxdev:bg-[Canvas] wpxdev:text-[CanvasText]", className)}
+      className={cn("bg-[Canvas] text-[CanvasText]", className)}
       {...props}
     />
   )
