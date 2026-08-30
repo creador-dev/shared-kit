@@ -1,1 +1,1 @@
-export * from "@creador-dev/utils";
+export * from "@wpxdev/utils";

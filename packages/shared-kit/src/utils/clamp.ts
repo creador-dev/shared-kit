@@ -1,1 +1,1 @@
-export { clamp } from "@creador-dev/utils/clamp";
+export { clamp } from "@wpxdev/utils/clamp";

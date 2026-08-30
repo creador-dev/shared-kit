@@ -1,1 +1,1 @@
-export { Button, buttonVariants } from "@creador-dev/components/button";
+export { Button, buttonVariants } from "@wpxdev/components/button";

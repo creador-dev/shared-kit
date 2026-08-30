@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/accordion";
+export * from "@wpxdev/components/accordion";

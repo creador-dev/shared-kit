@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/popover";
+export * from "@wpxdev/components/popover";

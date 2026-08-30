@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/sonner";
+export * from "@wpxdev/components/sonner";

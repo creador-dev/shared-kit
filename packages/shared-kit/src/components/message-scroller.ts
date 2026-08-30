@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/message-scroller";
+export * from "@wpxdev/components/message-scroller";

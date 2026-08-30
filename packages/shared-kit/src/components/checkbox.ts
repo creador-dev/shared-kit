@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/checkbox";
+export * from "@wpxdev/components/checkbox";

@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/aspect-ratio";
+export * from "@wpxdev/components/aspect-ratio";

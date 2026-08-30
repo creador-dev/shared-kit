@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/tabs";
+export * from "@wpxdev/components/tabs";

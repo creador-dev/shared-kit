@@ -119,16 +119,16 @@ importers:
 
   packages/shared-kit:
     dependencies:
-      '@creador-dev/components':
+      '@wpxdev/components':
         specifier: workspace:^
         version: link:../components
-      '@creador-dev/hooks':
+      '@wpxdev/hooks':
         specifier: workspace:^
         version: link:../hooks
-      '@creador-dev/styles':
+      '@wpxdev/styles':
         specifier: workspace:^
         version: link:../styles
-      '@creador-dev/utils':
+      '@wpxdev/utils':
         specifier: workspace:^
         version: link:../utils
 

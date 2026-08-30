@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/input-group";
+export * from "@wpxdev/components/input-group";

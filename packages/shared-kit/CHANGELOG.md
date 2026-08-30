@@ -1,4 +1,4 @@
-# @creador-dev/shared-kit
+# @wpxdev/shared-kit
 
 ## 0.3.0
 

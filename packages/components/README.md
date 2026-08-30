@@ -1,10 +1,10 @@
-# @creador-dev/components
+# @wpxdev/components
 
 Accessible React UI primitives built from locally owned shadcn/ui source.
 
 ```tsx
-import { Button } from "@creador-dev/components";
-import "@creador-dev/components/styles.css";
+import { Button } from "@wpxdev/components";
+import "@wpxdev/components/styles.css";
 
 export function Actions() {
   return (
@@ -19,14 +19,14 @@ export function Actions() {
 The Button also has a focused entry point:
 
 ```tsx
-import { Button } from "@creador-dev/components/button";
+import { Button } from "@wpxdev/components/button";
 ```
 
 All installed shadcn primitives have focused entry points using the component filename:
 
 ```tsx
-import { Dialog, DialogContent } from "@creador-dev/components/dialog";
-import { Sidebar, SidebarProvider } from "@creador-dev/components/sidebar";
+import { Dialog, DialogContent } from "@wpxdev/components/dialog";
+import { Sidebar, SidebarProvider } from "@wpxdev/components/sidebar";
 ```
 
 Registry-owned primitives live in `src/components/ui`. Keep custom wrappers, variants, and product-specific compositions in `src/components/composed` so shadcn updates cannot overwrite them.

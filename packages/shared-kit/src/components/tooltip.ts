@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/tooltip";
+export * from "@wpxdev/components/tooltip";

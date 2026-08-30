@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/combobox";
+export * from "@wpxdev/components/combobox";

@@ -1,1 +1,1 @@
-export { useDebouncedValue } from "@creador-dev/hooks/use-debounced-value";
+export { useDebouncedValue } from "@wpxdev/hooks/use-debounced-value";

@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/context-menu";
+export * from "@wpxdev/components/context-menu";

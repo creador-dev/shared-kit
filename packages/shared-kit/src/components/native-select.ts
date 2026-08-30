@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/native-select";
+export * from "@wpxdev/components/native-select";

@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/alert";
+export * from "@wpxdev/components/alert";

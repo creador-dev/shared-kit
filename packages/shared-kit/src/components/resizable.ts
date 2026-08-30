@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/resizable";
+export * from "@wpxdev/components/resizable";

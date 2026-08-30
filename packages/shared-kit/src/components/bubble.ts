@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/bubble";
+export * from "@wpxdev/components/bubble";

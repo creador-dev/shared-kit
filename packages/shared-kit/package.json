@@ -1,7 +1,7 @@
 {
-  "name": "@creador-dev/shared-kit",
+  "name": "@wpxdev/shared-kit",
   "version": "0.3.0",
-  "description": "Complete collection of reusable Creador frontend packages",
+  "description": "Complete collection of reusable WPXDev frontend packages",
   "type": "module",
   "sideEffects": [
     "**/*.css"
@@ -62,10 +62,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@creador-dev/components": "workspace:^",
-    "@creador-dev/hooks": "workspace:^",
-    "@creador-dev/styles": "workspace:^",
-    "@creador-dev/utils": "workspace:^"
+    "@wpxdev/components": "workspace:^",
+    "@wpxdev/hooks": "workspace:^",
+    "@wpxdev/styles": "workspace:^",
+    "@wpxdev/utils": "workspace:^"
   },
   "peerDependencies": {
     "react": ">=18"

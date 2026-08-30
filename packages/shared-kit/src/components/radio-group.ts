@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/radio-group";
+export * from "@wpxdev/components/radio-group";

@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/toggle-group";
+export * from "@wpxdev/components/toggle-group";

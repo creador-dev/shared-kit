@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/pagination";
+export * from "@wpxdev/components/pagination";

@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/navigation-menu";
+export * from "@wpxdev/components/navigation-menu";
