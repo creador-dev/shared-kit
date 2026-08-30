@@ -29,6 +29,7 @@ Tree-shakable direct entry points are also available:
 
 ```tsx
 import { Button } from "@creador-dev/shared-kit/components/button";
+import { Dialog } from "@creador-dev/shared-kit/components/dialog";
 import { useMediaQuery } from "@creador-dev/shared-kit/hooks/use-media-query";
 import { clamp } from "@creador-dev/shared-kit/utils/clamp";
 ```

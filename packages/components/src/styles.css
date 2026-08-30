@@ -3,6 +3,7 @@
 @import "tailwindcss/theme.css" layer(theme) prefix(wpxdev);
 @import "tailwindcss/utilities.css" layer(utilities) prefix(wpxdev);
 @import "tw-animate-css" prefix(wpxdev);
+@import "shadcn/tailwind.css" prefix(wpxdev);
 
 @source "./**/*.{ts,tsx}";
 
@@ -27,6 +28,14 @@
   --color-border: oklch(0.922 0 0);
   --color-input: oklch(0.922 0 0);
   --color-ring: oklch(0.708 0 0);
+  --color-sidebar: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --color-sidebar-primary: hsl(240 5.9% 10%);
+  --color-sidebar-primary-foreground: hsl(0 0% 98%);
+  --color-sidebar-accent: hsl(240 4.8% 95.9%);
+  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --color-sidebar-border: hsl(220 13% 91%);
+  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
 
   --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, monospace;
@@ -60,4 +69,15 @@
   --wpxdev-color-border: oklch(1 0 0 / 10%);
   --wpxdev-color-input: oklch(1 0 0 / 15%);
   --wpxdev-color-ring: oklch(0.556 0 0);
+}
+
+.wpxdev-dark {
+  --wpxdev-color-sidebar: hsl(240 5.9% 10%);
+  --wpxdev-color-sidebar-foreground: hsl(240 4.8% 95.9%);
+  --wpxdev-color-sidebar-primary: hsl(224.3 76.3% 48%);
+  --wpxdev-color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --wpxdev-color-sidebar-accent: hsl(240 3.7% 15.9%);
+  --wpxdev-color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --wpxdev-color-sidebar-border: hsl(240 3.7% 15.9%);
+  --wpxdev-color-sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
