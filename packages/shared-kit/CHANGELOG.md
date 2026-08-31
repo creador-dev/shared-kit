@@ -1,5 +1,16 @@
 # @wpxdev/shared-kit
 
+## 0.3.1
+
+### Patch Changes
+
+- 5ceb7ac: Publish the package collection under the `@wpxdev` npm organization and update all internal imports and documentation to use the new scope.
+- Updated dependencies [5ceb7ac]
+  - @wpxdev/components@0.3.1
+  - @wpxdev/hooks@0.2.1
+  - @wpxdev/styles@0.2.1
+  - @wpxdev/utils@0.2.1
+
 ## 0.3.0
 
 ### Minor Changes

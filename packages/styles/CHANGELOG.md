@@ -1,5 +1,11 @@
 # @wpxdev/styles
 
+## 0.2.1
+
+### Patch Changes
+
+- 5ceb7ac: Publish the package collection under the `@wpxdev` npm organization and update all internal imports and documentation to use the new scope.
+
 ## 0.2.0
 
 ### Minor Changes
