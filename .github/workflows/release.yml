@@ -47,6 +47,27 @@ jobs:
           version: pnpm version-packages
           title: "chore: version packages"
           commit: "chore: version packages"
-          createGithubReleases: true
+          createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push package version tags
+        if: steps.changesets.outputs.published == 'true'
+        run: git push origin --tags
+
+      - name: Generate consolidated release notes
+        id: release-notes
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          PUBLISHED_PACKAGES: ${{ steps.changesets.outputs.publishedPackages }}
+          RELEASE_NOTES_PATH: ${{ runner.temp }}/wpxdev-release-notes.md
+        run: node .github/scripts/create-consolidated-release.mjs
+
+      - name: Create consolidated GitHub release
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ steps.release-notes.outputs.tag }}
+          RELEASE_TITLE: ${{ steps.release-notes.outputs.title }}
+          RELEASE_NOTES_PATH: ${{ runner.temp }}/wpxdev-release-notes.md
+        run: gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --title "$RELEASE_TITLE" --notes-file "$RELEASE_NOTES_PATH"
