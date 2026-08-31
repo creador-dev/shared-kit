@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/slider";
+export * from "@wpxdev/components/slider";

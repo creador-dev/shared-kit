@@ -1,5 +1,5 @@
 {
-  "name": "@creador-dev/components",
+  "name": "@wpxdev/components",
   "version": "0.3.0",
   "description": "Accessible, reusable React UI primitives",
   "type": "module",

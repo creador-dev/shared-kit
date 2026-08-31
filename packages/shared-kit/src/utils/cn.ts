@@ -1,1 +1,1 @@
-export { cn } from "@creador-dev/utils/cn";
+export { cn } from "@wpxdev/utils/cn";

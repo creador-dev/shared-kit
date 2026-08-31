@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/kbd";
+export * from "@wpxdev/components/kbd";

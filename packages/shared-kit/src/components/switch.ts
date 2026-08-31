@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/switch";
+export * from "@wpxdev/components/switch";

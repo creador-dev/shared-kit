@@ -1,4 +1,4 @@
-# @creador-dev/styles
+# @wpxdev/styles
 
 ## 0.2.0
 

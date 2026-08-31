@@ -1,4 +1,4 @@
-# @creador-dev/components
+# @wpxdev/components
 
 ## 0.3.0
 

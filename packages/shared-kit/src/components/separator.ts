@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/separator";
+export * from "@wpxdev/components/separator";

@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/button-group";
+export * from "@wpxdev/components/button-group";

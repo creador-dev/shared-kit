@@ -1,4 +1,4 @@
-export * from "@creador-dev/components";
-export * from "@creador-dev/hooks";
-export * from "@creador-dev/utils";
+export * from "@wpxdev/components";
+export * from "@wpxdev/hooks";
+export * from "@wpxdev/utils";
 

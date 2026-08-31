@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/dropdown-menu";
+export * from "@wpxdev/components/dropdown-menu";

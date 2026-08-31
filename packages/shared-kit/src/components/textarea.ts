@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/textarea";
+export * from "@wpxdev/components/textarea";

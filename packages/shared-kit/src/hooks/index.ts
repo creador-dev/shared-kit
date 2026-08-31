@@ -1,1 +1,1 @@
-export * from "@creador-dev/hooks";
+export * from "@wpxdev/hooks";

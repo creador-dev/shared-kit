@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/hover-card";
+export * from "@wpxdev/components/hover-card";

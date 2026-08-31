@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/carousel";
+export * from "@wpxdev/components/carousel";

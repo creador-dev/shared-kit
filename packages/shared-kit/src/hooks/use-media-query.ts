@@ -1,1 +1,1 @@
-export { useMediaQuery } from "@creador-dev/hooks/use-media-query";
+export { useMediaQuery } from "@wpxdev/hooks/use-media-query";

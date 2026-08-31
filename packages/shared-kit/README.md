@@ -1,9 +1,9 @@
-# @creador-dev/shared-kit
+# @wpxdev/shared-kit
 
-The convenient entry point for the complete Creador frontend toolkit.
+The convenient entry point for the complete WPXDev frontend toolkit.
 
 ```tsx
-import { Button, clamp, useMediaQuery } from "@creador-dev/shared-kit";
+import { Button, clamp, useMediaQuery } from "@wpxdev/shared-kit";
 
 export function Example() {
   const compact = useMediaQuery("(max-width: 48rem)");
@@ -20,16 +20,16 @@ export function Example() {
 Import the compiled component styles once at the application entry point:
 
 ```css
-@import "@creador-dev/shared-kit/styles.css";
+@import "@wpxdev/shared-kit/styles.css";
 ```
 
-Install focused packages such as `@creador-dev/utils` directly when an application does not need the full toolkit.
+Install focused packages such as `@wpxdev/utils` directly when an application does not need the full toolkit.
 
 Tree-shakable direct entry points are also available:
 
 ```tsx
-import { Button } from "@creador-dev/shared-kit/components/button";
-import { Dialog } from "@creador-dev/shared-kit/components/dialog";
-import { useMediaQuery } from "@creador-dev/shared-kit/hooks/use-media-query";
-import { clamp } from "@creador-dev/shared-kit/utils/clamp";
+import { Button } from "@wpxdev/shared-kit/components/button";
+import { Dialog } from "@wpxdev/shared-kit/components/dialog";
+import { useMediaQuery } from "@wpxdev/shared-kit/hooks/use-media-query";
+import { clamp } from "@wpxdev/shared-kit/utils/clamp";
 ```

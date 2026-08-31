@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/collapsible";
+export * from "@wpxdev/components/collapsible";

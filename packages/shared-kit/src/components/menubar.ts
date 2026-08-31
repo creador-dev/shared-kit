@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/menubar";
+export * from "@wpxdev/components/menubar";

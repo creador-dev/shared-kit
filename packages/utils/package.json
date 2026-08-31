@@ -1,5 +1,5 @@
 {
-  "name": "@creador-dev/utils",
+  "name": "@wpxdev/utils",
   "version": "0.2.0",
   "description": "Shared, dependency-free TypeScript utilities",
   "type": "module",

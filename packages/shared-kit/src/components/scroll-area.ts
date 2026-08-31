@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/scroll-area";
+export * from "@wpxdev/components/scroll-area";

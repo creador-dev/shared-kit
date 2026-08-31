@@ -1,4 +1,4 @@
-# @creador-dev/utils
+# @wpxdev/utils
 
 ## 0.2.0
 

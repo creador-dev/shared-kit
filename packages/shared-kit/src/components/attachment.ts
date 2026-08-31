@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/attachment";
+export * from "@wpxdev/components/attachment";

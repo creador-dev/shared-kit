@@ -4,11 +4,11 @@ A small, reusable monorepo for shared frontend building blocks. Add packages her
 
 ## Packages
 
-- `@creador-dev/shared-kit` — convenient entry point for the complete toolkit
-- `@creador-dev/hooks` — framework hooks for React applications
-- `@creador-dev/components` — accessible React UI primitives
-- `@creador-dev/styles` — CSS variables, reset, and shared utility classes
-- `@creador-dev/utils` — dependency-free TypeScript utilities
+- `@wpxdev/shared-kit` — convenient entry point for the complete toolkit
+- `@wpxdev/hooks` — framework hooks for React applications
+- `@wpxdev/components` — accessible React UI primitives
+- `@wpxdev/styles` — CSS variables, reset, and shared utility classes
+- `@wpxdev/utils` — dependency-free TypeScript utilities
 
 ## AI skills
 
@@ -28,7 +28,7 @@ During local app development, add a package with the workspace protocol:
 ```json
 {
   "dependencies": {
-    "@creador-dev/utils": "workspace:*"
+    "@wpxdev/utils": "workspace:*"
   }
 }
 ```
@@ -38,13 +38,13 @@ For applications outside this monorepo, publish packages to GitHub Packages or n
 Use the umbrella package when an application needs the complete toolkit:
 
 ```ts
-import { Button, clamp, useMediaQuery } from "@creador-dev/shared-kit";
+import { Button, clamp, useMediaQuery } from "@wpxdev/shared-kit";
 ```
 
 Global tokens and reset styles remain opt-in:
 
 ```css
-@import "@creador-dev/shared-kit/styles.css";
+@import "@wpxdev/shared-kit/styles.css";
 ```
 
 ## Releases
@@ -57,7 +57,7 @@ pnpm changeset
 
 Use `pnpm changeset --empty` for changes that intentionally do not require a release. When changesets reach `main`, GitHub Actions creates or updates a `Version Packages` pull request. Merging that pull request publishes the new package versions to npm and creates GitHub releases.
 
-Publishing uses npm trusted publishing with GitHub Actions OIDC. Each npm package authorizes the `creador-dev/shared-kit` repository and the `release.yml` workflow, so no long-lived npm token is stored in GitHub.
+Publishing uses npm trusted publishing with GitHub Actions OIDC. Each npm package authorizes the `wpxdevlabs/shared-kit` repository and the `release.yml` workflow, so no long-lived npm token is stored in GitHub.
 
 ## Adding a package
 

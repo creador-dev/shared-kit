@@ -1,1 +1,1 @@
-export * from "@creador-dev/components/calendar";
+export * from "@wpxdev/components/calendar";
