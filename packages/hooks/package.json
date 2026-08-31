@@ -2,6 +2,11 @@
   "name": "@wpxdev/hooks",
   "version": "0.2.1",
   "description": "Reusable React hooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpxdevlabs/shared-kit",
+    "directory": "packages/hooks"
+  },
   "type": "module",
   "sideEffects": false,
   "files": [
