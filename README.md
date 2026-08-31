@@ -1,20 +1,127 @@
-# shared-kit
+# WPXDev Shared Kit
 
-A small, reusable monorepo for shared frontend building blocks. Add packages here once, then consume them from future applications through workspace dependencies or a package registry.
+[![CI](https://github.com/wpxdevlabs/shared-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/wpxdevlabs/shared-kit/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/%40wpxdev%2Fshared-kit.svg?label=%40wpxdev%2Fshared-kit)](https://www.npmjs.com/package/@wpxdev/shared-kit)
+[![TypeScript](https://img.shields.io/badge/TypeScript-ready-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+A reusable React and TypeScript toolkit for building consistent application and WordPress plugin interfaces. It combines locally owned shadcn/ui components, hooks, utilities, and opt-in styles in focused packages that can be installed separately or through one umbrella package.
+
+## Highlights
+
+- Locally owned shadcn/ui source that can be reviewed and updated deliberately.
+- Direct, tree-shakable entry points for components, hooks, and utilities.
+- Package-owned CSS variables use the `--wpxdev-*` namespace.
+- Global styles and the `.wpxdev-root` reset remain opt-in.
+- Custom compositions live separately from registry-managed UI components.
+- Automated Changesets releases with npm Trusted Publishing and provenance.
 
 ## Packages
 
-- `@wpxdev/shared-kit` — convenient entry point for the complete toolkit
-- `@wpxdev/hooks` — framework hooks for React applications
-- `@wpxdev/components` — accessible React UI primitives
-- `@wpxdev/styles` — CSS variables, reset, and shared utility classes
-- `@wpxdev/utils` — dependency-free TypeScript utilities
+| Package | Purpose | Documentation |
+| --- | --- | --- |
+| [`@wpxdev/shared-kit`](https://www.npmjs.com/package/@wpxdev/shared-kit) | Umbrella entry point for the complete toolkit | [Package README](./packages/shared-kit/README.md) |
+| [`@wpxdev/components`](https://www.npmjs.com/package/@wpxdev/components) | Accessible React components built from locally owned shadcn/ui source | [Package README](./packages/components/README.md) |
+| [`@wpxdev/hooks`](https://www.npmjs.com/package/@wpxdev/hooks) | Reusable React hooks | [Package README](./packages/hooks/README.md) |
+| [`@wpxdev/styles`](https://www.npmjs.com/package/@wpxdev/styles) | CSS variables, scoped reset, utilities, and SCSS source | [Package README](./packages/styles/README.md) |
+| [`@wpxdev/utils`](https://www.npmjs.com/package/@wpxdev/utils) | Dependency-free TypeScript utilities | [Package README](./packages/utils/README.md) |
 
-## AI skills
+## Quick start
 
-Reusable agent instructions live in [`ai-skills/`](./ai-skills/README.md). The animation collection supports Claude Code, Codex, Cursor, Gemini, Antigravity, and Windsurf.
+Install the complete toolkit with its React peer dependencies:
+
+```bash
+pnpm add @wpxdev/shared-kit react react-dom
+```
+
+Import only the APIs and styles your application needs:
+
+```tsx
+import { Button } from "@wpxdev/shared-kit/components/button";
+import { useMediaQuery } from "@wpxdev/shared-kit/hooks/use-media-query";
+import { clamp } from "@wpxdev/shared-kit/utils/clamp";
+import "@wpxdev/shared-kit/styles.css";
+
+export function Toolbar() {
+  const compact = useMediaQuery("(max-width: 48rem)");
+  const visibleItems = clamp(compact ? 2 : 5, 1, 5);
+
+  return <Button>Show {visibleItems} items</Button>;
+}
+```
+
+Applications that need only part of the toolkit can install a focused package instead:
+
+```bash
+pnpm add @wpxdev/components react react-dom
+```
+
+```tsx
+import { Button } from "@wpxdev/components/button";
+import "@wpxdev/components/styles.css";
+```
+
+## Imports
+
+Every package supports a root entry point, while commonly used APIs also have focused entry points:
+
+```tsx
+import { Button, Dialog } from "@wpxdev/components";
+import { Button as FocusedButton } from "@wpxdev/components/button";
+import { useDebouncedValue } from "@wpxdev/hooks/use-debounced-value";
+import { cn } from "@wpxdev/utils/cn";
+```
+
+Focused imports make dependencies explicit and help consumers include only what they use.
+
+## Styling and isolation
+
+Component styles are opt-in and should be imported once at the application entry point:
+
+```css
+@import "@wpxdev/components/styles.css";
+```
+
+The standalone styles package supports compiled CSS, individual layers, and authored SCSS:
+
+```css
+@import "@wpxdev/styles/tokens.css";
+@import "@wpxdev/styles/reset.css";
+```
+
+```scss
+@use "@wpxdev/styles/index.scss";
+```
+
+Package-owned custom properties use names such as `--wpxdev-color-primary`. Wrap plugin interfaces in `.wpxdev-root` when applying the scoped reset so host WordPress admin styles are not changed globally.
+
+## Components and customization
+
+Registry-managed shadcn/ui components live in [`packages/components/src/components/ui`](./packages/components/src/components/ui). Keep product-specific variants, wrappers, and multi-component patterns in [`packages/components/src/components/composed`](./packages/components/src/components/composed) so future shadcn updates do not overwrite custom work.
+
+The intended workflow is:
+
+1. Update or add the base shadcn component under `components/ui`.
+2. Preserve its standard public API and focused package export.
+3. Add project-specific behavior under `components/composed`.
+4. Import composed components explicitly where an application needs them.
+
+## Repository structure
+
+```text
+shared-kit/
+├── packages/
+│   ├── components/   React and shadcn/ui components
+│   ├── hooks/        Reusable React hooks
+│   ├── shared-kit/   Umbrella package and focused re-exports
+│   ├── styles/       CSS and SCSS foundations
+│   └── utils/        Dependency-free utilities
+├── ai-skills/        Reusable coding-agent instructions
+└── .changeset/       Release intent and changelog entries
+```
 
 ## Development
+
+This repository uses pnpm workspaces. Install dependencies and run the complete validation suite from the repository root:
 
 ```bash
 pnpm install
@@ -23,45 +130,46 @@ pnpm typecheck
 pnpm test
 ```
 
-During local app development, add a package with the workspace protocol:
+During local development, workspace consumers can depend on packages without publishing them:
 
 ```json
 {
   "dependencies": {
+    "@wpxdev/components": "workspace:*",
     "@wpxdev/utils": "workspace:*"
   }
 }
 ```
 
-For applications outside this monorepo, publish packages to GitHub Packages or npm and install them by version.
+## Adding a package
 
-Use the umbrella package when an application needs the complete toolkit:
-
-```ts
-import { Button, clamp, useMediaQuery } from "@wpxdev/shared-kit";
-```
-
-Global tokens and reset styles remain opt-in:
-
-```css
-@import "@wpxdev/shared-kit/styles.css";
-```
+1. Copy the structure of the closest existing package under `packages/`.
+2. Use an `@wpxdev/*` package name and define explicit `exports`.
+3. Add repository metadata pointing to `wpxdevlabs/shared-kit` and the package directory.
+4. Include source code, tests where applicable, and a package-level README.
+5. Run the full validation suite and add a Changeset for publishable work.
 
 ## Releases
 
-Every pull request that changes a publishable package should include a changeset:
+Every pull request that changes a published package must describe its release impact:
 
 ```bash
 pnpm changeset
 ```
 
-Use `pnpm changeset --empty` for changes that intentionally do not require a release. When changesets reach `main`, GitHub Actions creates or updates a `Version Packages` pull request. Merging that pull request publishes the new package versions to npm and creates GitHub releases.
+Use `pnpm changeset --empty` only for package-file changes that intentionally require no version bump. After changes reach `main`:
 
-Publishing uses npm trusted publishing with GitHub Actions OIDC. Each npm package authorizes the `wpxdevlabs/shared-kit` repository and the `release.yml` workflow, so no long-lived npm token is stored in GitHub.
+1. Changesets creates or updates the `chore: version packages` pull request.
+2. Merging that pull request publishes each changed package to npm.
+3. npm Trusted Publishing signs provenance through GitHub Actions OIDC.
+4. GitHub receives one consolidated release containing every package published in that batch.
 
-## Adding a package
+Package versions remain independent, and package-specific Git tags provide exact source traceability.
 
-1. Copy the structure of an existing directory under `packages/`.
-2. Give it a scoped name and explicit `exports` in `package.json`.
-3. Add source code, tests, and a package README.
-4. Run `pnpm changeset` to describe a publishable change.
+## Security
+
+Please report vulnerabilities privately according to the [security policy](./.github/SECURITY.md). Do not disclose suspected vulnerabilities in public issues or discussions.
+
+## AI skills
+
+Reusable agent instructions live in [`ai-skills/`](./ai-skills/README.md). The animation collection supports Claude Code, Codex, Cursor, Gemini, Antigravity, and Windsurf.
